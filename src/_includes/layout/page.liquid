@@ -1,0 +1,12 @@
+---
+layout: layout/base
+---
+<header>
+  {% include 'content-heading.liquid' %}
+  {%- if summary -%}
+    <div class="text-xl">
+      {{ summary | markdownify }}
+    </div>
+  {%- endif -%}
+</header>
+{{ content }}

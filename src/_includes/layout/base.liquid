@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" class="text-base sm:text-lg lg:text-xl xl:text-2xl no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.data.hidden == true %}
+      <meta name="robots" content="noindex, nofollow">
+    {% else %}
+      <link rel="canonical" href="{% if canonical.url %}{{ canonical.url }}{% else %}{{ page.url | prepend: app.url | permalink }}{% endif %}">
+    {% endif %}
+    {% include "hashed-assets/scripts-head.liquid" %}
+    {% include "hashed-assets/styles.liquid" %}
+    <title>{% if type != 'homepage' %}{{ title | markdownify: 'inline' | strip_html }} | {% endif %}{{ app.title }}</title>
+    <meta name="twitter:site" content="@isellsoap">
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="RSS (Atom) Feed">
+    <link rel="alternate" href="/feed.json" type="application/json" title="JSON Feed">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="{{ app.icon }}" type="image/jpg">
+  </head>
+  <body class="bg-grey-lighter text-black font-sans antialiased leading-normal">
+    <header role="banner" class="py-3 md:py-6">
+      <div class="m-auto max-w-md px-3 sm:px-6 lg:pl-10 flex items-center">
+        <img src="/images/app.jpg" class="h-24 w-24 shadow rounded-full" alt="Francesco Schwarz">
+        <div class="flex-grow ml-3 md:ml-6">
+          <h1 class="text-lg mb-1 font-semibold leading-tighter"><a href="{{ '/' }}" class="text-inherit no-underline">{{ app.title }}</a></h1>
+          <nav role="navigation">
+            <ul class="list-reset m-0 flex flex-wrap">
+              {% for item in navigation.primary %}
+                <li class="{% unless forloop.last %}mr-3 lg:mr-4{% endunless%}"><a href="{{ item.url }}" class="no-underline text-grey-darker focus:text-grey-darkest hover:text-grey-darkest">{{ item.label }}</a></li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main role="main" class="block">
+      <div class="m-auto max-w-md pt-6 p-3 sm:p-6 lg:pl-10 bg-white">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer role="contentinfo" class="py-3 md:py-6 text-grey-darker">
+      <div class="m-auto max-w-md px-3 sm:px-6 lg:pl-10 footer-inner">
+        <ul class="list-reset flex flex-wrap m-0 mb-3">
+          {% for item in navigation.secondary %}
+            <li class="{% unless forloop.last %}mr-3 lg:mr-4{% endunless%}"><a href="{{ item.url }}" class="no-underline text-inherit focus:text-grey-darkest hover:text-grey-darkest">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+        <p class="mb-0">This is the very bottom of the website. 🙌 Thanks for stopping by!</p>
+      </div>
+  </footer>
+  </body>
+</html>

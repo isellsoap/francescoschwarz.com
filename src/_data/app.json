@@ -1,0 +1,15 @@
+{
+  "title": "Francesco Schwarz",
+  "url": "https://francescoschwarz.com",
+  "description": "The personal website of Francesco Schwarz",
+  "favicon": "/images/app.ico",
+  "icon": "/images/app.jpg",
+  "author": {
+    "name": "Francesco Schwarz",
+    "email": "francesco.schwarz@posteo.de",
+    "url": "https://francescoschwarz.com",
+    "twitter": "https://twitter.com/isellsoap",
+    "github": "https://github.com/isellsoap",
+    "linkedin": "https://www.linkedin.com/in/francescoschwarz"
+  }
+}

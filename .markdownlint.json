@@ -1,0 +1,17 @@
+{
+  "default": true,
+  "MD002": { "level": 3 },
+  "MD004": { "style": "dash" },
+  "MD007": { "indent": 4 },
+  "MD013": false,
+  "MD025": { "level": 2 },
+  "MD026": { "punctuation": ".,;:!" },
+  "MD029": { "style": "ordered" },
+  "MD033": { "allowed_elements": ["b", "cite", "del", "ins", "mark", "q", "time"] },
+  "MD034": false,
+  "MD035": { "style": "---" },
+  "MD040": false,
+  "MD041": false,
+  "MD044": { "names": ["JavaScript"] },
+  "emphasis-style": { "style": "*" }
+}

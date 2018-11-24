@@ -1,0 +1,16 @@
+---
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for item in collections.sitemap %}
+  {% unless item.data.hidden == true %}
+  <url>
+    <loc>{{ item.url | prepend: app.url | permalink }}</loc>
+    <lastmod>{{ item.date | date: dates.iso }}</lastmod>
+    <changefreq>{{ item.data.changefreq }}</changefreq>
+    <priority>{{ item.data.priority }}</priority>
+  </url>
+  {% endunless %}
+{% endfor %}
+</urlset>

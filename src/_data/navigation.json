@@ -1,0 +1,38 @@
+{
+  "primary": [
+    {
+      "label": "Blog",
+      "url": "/blog/"
+    },
+    {
+      "label": "Projects",
+      "url": "/projects/"
+    },
+    {
+      "label": "Twitter",
+      "url": "https://twitter.com/isellsoap"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/isellsoap"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/francescoschwarz"
+    }
+  ],
+  "secondary": [
+    {
+      "label": "RSS feed",
+      "url": "/feed.xml"
+    },
+    {
+      "label": "Legal notice",
+      "url": "/legal-notice/"
+    },
+    {
+      "label": "Privacy",
+      "url": "/privacy/"
+    }
+  ]
+}

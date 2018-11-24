@@ -1,0 +1,17 @@
+<ol class="list-reset ml-0">
+{%- for item in items limit: itemsLimit -%}
+  <li class="{% unless forloop.first %}pt-3{% endunless%} {% unless forloop.last %}pb-3 border-0 border-b border-solid border-grey{% endunless%}">
+    <article>
+      <header class="flex flex-col">
+        <h3 class="mb-2">
+          <a href="{{ item.url }}">{{ item.data.title | markdownify: 'inline' }}</a>
+        </h3>
+        <time datetime="{{ item.data.date | date: dates.iso }}" aria-label="{{ item.data.date | date: dates.long }}" class="-order-1 text-grey-darker text-sm">{{ item.data.date | date: dates.short }}</time>
+      </header>
+      {%- if item.data.summary -%}
+        <p class="mb-0">{{ item.data.summary | markdownify: 'inline' }}</p>
+      {%- endif -%}
+    </article>
+  </li>
+{%- endfor -%}
+</ol>

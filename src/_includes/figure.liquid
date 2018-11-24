@@ -1,0 +1,23 @@
+{% capture imgMarkup %}
+  <noscript>
+      <img src="{{ figure }}" alt="{{ alt }}" class="block">
+  </noscript>
+  <img data-src="{{ figure }}" alt="{{ alt }}" class="lazyload block">
+{% endcapture %}
+
+<figure>
+{%- if linkHd -%}
+  <a href="{{ figure | hdify }}" class="block">
+    {{ imgMarkup }}
+  </a>
+{%- elsif linkExternal -%}
+  <a href="{{ linkExternal }}" class="block">
+    {{ imgMarkup }}
+  </a>
+{%- else -%}
+  {{ imgMarkup }}
+{%- endif -%}
+{%- if caption -%}
+  <figcaption>{{ caption | markdownify }}</figcaption>
+{%- endif -%}
+</figure>

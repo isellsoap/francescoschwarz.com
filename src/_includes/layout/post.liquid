@@ -1,0 +1,14 @@
+---
+layout: layout/base
+---
+<article>
+  <header class="flex flex-col">
+    {% include 'content-heading.liquid' %}
+    <time datetime="{{ date | date: dates.iso }}" class="-order-1 mb-1 text-grey-darker text-sm">{{ date | date: dates.long }}</time>
+  </header>
+  {{ content }}
+  {% if twitterTimeline %}
+    <hr class="mt-16">
+    <p><a href="https://mobile.twitter.com/isellsoap/timelines/{{ twitterTimeline }}">Read responses and related content on Twitter.</a></p>
+  {% endif %}
+</article>
