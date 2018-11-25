@@ -19,7 +19,7 @@ As the operator of francescoschwarz.com it is important to me that you know exac
 
 francescoschwarz.com is currently delivered by a server of the German hosting company [Uberspace](https://uberspace.de/). The server location is Frankfurt am Main, Germany.
 
-The web server logs for francescoschwarz.com are disabled, that means connections to this website don’t get logged at all.
+The web server logs for francescoschwarz.com are turned off, that means connections to this website don’t get logged at all.
 
 ### SSL encryption
 
