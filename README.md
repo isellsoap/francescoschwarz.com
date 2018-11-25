@@ -1,8 +1,14 @@
+<!-- markdownlint-disable MD002 -->
+
 # francescoschwarz.com
+
+[![Travis CI Build Status](https://travis-ci.com/isellsoap/francescoschwarz.com.svg?branch=master)](https://travis-ci.com/isellsoap/francescoschwarz.com)
 
 The personal website of Francesco Schwarz.
 
 ## Development
+
+<!-- markdownlint-enable MD002 -->
 
 ### Prerequisites
 
