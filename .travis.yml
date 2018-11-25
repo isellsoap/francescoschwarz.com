@@ -26,7 +26,7 @@ install:
   - yarn
 
 before_script:
-  - echo -e "Host $DEPLOY_HOSTntStrictHostKeyChecking non" >> ~/.ssh/config
+  - echo -e "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 script:
   - yarn build
