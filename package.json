@@ -40,7 +40,9 @@
   },
   "lint-staged": {
     "*.md": [
-      "yarn lint:md"
+      "markdownlint --rules markdownlint-rule-emphasis-style",
+      "alex",
+      "proselintjs"
     ]
   },
   "devDependencies": {
