@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if page.data.hidden == true %}
+    {% if hidden == true %}
       <meta name="robots" content="noindex, nofollow">
     {% else %}
       <link rel="canonical" href="{% if canonical.url %}{{ canonical.url }}{% else %}{{ page.url | prepend: app.url | permalink }}{% endif %}">
