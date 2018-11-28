@@ -11,6 +11,16 @@
     {% include "hashed-assets/scripts-head.liquid" %}
     {% include "hashed-assets/styles.liquid" %}
     <title>{% if type != 'homepage' %}{{ title | markdownify: 'inline' | strip_html }} | {% endif %}{{ app.title }}</title>
+    <meta property="og:title" content="{% if title != '' %}{{ title | markdownify: 'inline' | strip_html }}{% else %}{{ app.title }}{% endif %}">
+    <meta property="og:description" name="description" content="{% if summary %}{{ summary | markdownify | strip_html | strip_newlines | strip }}{% else %}{{ app.description }}{% endif %}">
+    <meta property="og:url" content="{% if url %}{{ url }}{% else %}{{ page.url | prepend: app.url | permalink }}{% endif %}">
+    {%- if image -%}
+      <meta property="og:image" content="{{ image }}">
+      <meta name="twitter:card" content="summary_large_image">
+    {%- else -%}
+      <meta property="og:image" content="{{ app.icon | prepend: app.url }}">
+      <meta name="twitter:card" content="summary">
+    {%- endif -%}
     <meta name="twitter:site" content="@isellsoap">
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="RSS (Atom) Feed">
     <link rel="alternate" href="/feed.json" type="application/json" title="JSON Feed">
