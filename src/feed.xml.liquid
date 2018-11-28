@@ -17,7 +17,7 @@ permalink: /feed.xml
   <rights>&#169; {{ 'now' | date: '%Y' }} {{ app.author.name }}. Content Creative Commons licensed unless otherwise stated.</rights>
   {%- for item in collections.post -%}
     <entry>
-      <id>{{ item.url | prepend: app.url }}</id>
+      <id>{{ item.url | prepend: app.url | permalink }}</id>
       <title>{{ item.data.title | markdownify: 'inline' | escape | strip_html | strip_newlines }}</title>
       <updated>{{ item.data.date | date: dates.iso }}</updated>
       <link href="{{ item.url | prepend: app.url | permalink }}" rel="alternate" type="text/html"/>
