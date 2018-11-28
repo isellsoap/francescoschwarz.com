@@ -63,15 +63,20 @@ francescoschwarz.com/
 │   ├── images/                # Content images
 │   ├── feed.json.liquid       # RSS (JSON Feed) template
 │   ├── feed.xml.liquid        # RSS (Atom) template
+│   ├── manifest.json.liquid   # Web App Manifest template
 │   ├── robots.txt.liquid      # robots.txt template
 │   └── sitemap.xml.liquid     # Sitemap template
 │
+├── .alexignore                # Files not processed by alex
+├── .alexrc                    # alex configuration
 ├── .editorconfig              # Text editor configuration
 ├── .gitignore                 # Files not tracked by Git
+├── .markdownlint.json         # markdownlint configuration
 ├── .nvmrc                     # nvm configuration
 ├── .prettierignore            # Files not processed by Prettier
 ├── .prettierrc                # Prettier configuration
 ├── .travis.yml                # Travis CI configuration
+├── deploy_rsa.enc             # Encrypted deploy key for Travis CI
 ├── package.json               # Node.js package manifest
 ├── README.md                  # This file
 ├── tsconfig.json              # TypeScript configuration
