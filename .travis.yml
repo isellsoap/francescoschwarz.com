@@ -42,6 +42,6 @@ deploy:
   skip_cleanup: true
   script:
     - rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/dist/ $DEPLOY_SSH_USER@$DEPLOY_HOST:$DEPLOY_PATH_TO_FILES
-    - $HTACCESS_COPY
+    - ssh $DEPLOY_SSH_USER@$DEPLOY_HOST $CONFIG_FILE_COPY
   on:
     branch: master
