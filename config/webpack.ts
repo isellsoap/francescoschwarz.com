@@ -78,16 +78,7 @@ export default (env, argv) => {
       new MiniCssExtractPlugin({
         filename: 'styles/main.[contenthash].css'
       }),
-      new PurgecssWebpackPlugin({
-        paths: glob.sync('./src/**/*.liquid'),
-        whitelist: require('./markdown.ts').permalinkClasses.split(' '),
-        extractors: [
-          {
-            extractor: TailwindExtractor,
-            extensions: ['liquid']
-          }
-        ]
-      }),
+
       ...glob.sync('./src/assets/ejs/*.liquid.ejs').map(
         page =>
           new HtmlWebpackPlugin({
@@ -111,6 +102,19 @@ export default (env, argv) => {
         ]
       }
     });
+
+    config.plugins = config.plugins.concat(
+      new PurgecssWebpackPlugin({
+        paths: () => glob.sync('./src/**/*.liquid'),
+        whitelist: require('./markdown.ts').permalinkClasses.split(' '),
+        extractors: [
+          {
+            extractor: TailwindExtractor,
+            extensions: ['liquid']
+          }
+        ]
+      })
+    );
   }
 
   return config;
