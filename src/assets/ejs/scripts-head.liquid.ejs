@@ -1,7 +1,4 @@
-<script>
-  (function(H) {
-    H.className = H.className.replace(/\bno-js\b/, 'js');
-  })(document.documentElement);
-</script>
+<!-- Substitute the `no-js` with the `js` class on the `html` element. -->
+<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js');})(document.documentElement);</script>
 
 <script src="<%= htmlWebpackPlugin.files.chunks['scripts/lazysizes'].entry %>" async></script>
