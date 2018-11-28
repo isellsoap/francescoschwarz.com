@@ -40,8 +40,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script:
-    - rsync -r --delete-after --quiet $FILES_TO_COPY $DEPLOY_SSH_USER@$DEPLOY_HOST:$DEPLOY_PATH_TO_FILES
-    - $HTACCESS_COPY
+  script: rsync -r --delete-after --quiet $FILES_TO_COPY $DEPLOY_SSH_USER@$DEPLOY_HOST:$DEPLOY_PATH_TO_FILES && $HTACCESS_COPY
   on:
     branch: master
