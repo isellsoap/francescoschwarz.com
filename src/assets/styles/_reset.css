@@ -121,7 +121,7 @@ a:hover {
 
 a:focus {
   outline: 5px dashed config('colors["blue-dark"]');
-  outline-offset: 1px;
+  outline-offset: 2px;
 }
 
 /**
