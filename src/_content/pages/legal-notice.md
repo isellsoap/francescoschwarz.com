@@ -4,7 +4,6 @@ permalink: legal-notice/index.html
 priority: 0.5
 changefreq: yearly
 ---
-
 Responsible in accordance with § 5 TMG and § 55 RfStV:
 
 Francesco Schwarz

@@ -5,7 +5,6 @@ pagination:
   data: collections.post
   size: 24
 ---
-
 {% include 'posts'
   items: pagination.items
 %}

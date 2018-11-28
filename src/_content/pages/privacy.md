@@ -4,7 +4,6 @@ permalink: privacy/index.html
 priority: 0.5
 changefreq: yearly
 ---
-
 Responsible in accordance with the data protection laws:
 
 Francesco Schwarz
