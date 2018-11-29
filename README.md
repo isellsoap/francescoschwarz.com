@@ -21,7 +21,7 @@ The personal website of Francesco Schwarz.
 ### Installation
 
 1. `git@github.com:isellsoap/francescoschwarz.com.git`
-2. `cd francescoschwsarz.com`
+2. `cd francescoschwarz.com`
 3. `yarn`
 
 ### Building
