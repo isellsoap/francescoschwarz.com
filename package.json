@@ -45,11 +45,11 @@
       "proselintjs"
     ]
   },
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^0.6.0",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.0",
-    "@types/webpack": "^4.4.19",
+    "@types/webpack": "^4.4.20",
     "alex": "^6.0.0",
     "autoprefixer": "^9.3.1",
     "clean-webpack-plugin": "^1.0.0",
@@ -59,6 +59,7 @@
     "html-minifier": "^3.5.21",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.2.0",
+    "lazysizes": "^4.1.4",
     "lint-staged": "^8.1.0",
     "markdown-it": "^8.4.2",
     "markdown-it-abbr": "^1.0.4",
@@ -75,23 +76,20 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
-    "prettier": "^1.15.2",
+    "prettier": "^1.15.3",
     "proselint": "^0.1.7",
     "purgecss-webpack-plugin": "^1.4.0",
+    "tailwindcss": "^0.7.2",
+    "tailwindcss-flexbox-order": "^1.0.0",
     "ts-loader": "^5.3.1",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.17.0",
     "tslint-loader": "^3.5.4",
     "tslint-plugin-prettier": "^2.0.1",
-    "typescript": "^3.1.6",
+    "typescript": "^3.2.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2"
-  },
-  "dependencies": {
-    "lazysizes": "^4.1.4",
-    "tailwindcss": "^0.7.2",
-    "tailwindcss-flexbox-order": "^1.0.0"
   }
 }
