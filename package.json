@@ -19,9 +19,9 @@
   },
   "scripts": {
     "prebuild": "yarn test",
-    "build": "ELEVENTY_ENV=production yarn build:assets && yarn build:files",
+    "build": "yarn build:assets && yarn build:files",
     "build:assets": "webpack --config=config/webpack.ts -p --progress --mode=production",
-    "build:files": "eleventy --config config/eleventy.ts",
+    "build:files": "ELEVENTY_ENV=production eleventy --config config/eleventy.ts",
     "start": "npm-run-all --parallel watch:assets serve:files",
     "watch:assets": "webpack --config=config/webpack.ts -d --watch --progress --mode=development",
     "serve:files": "ELEVENTY_ENV=development eleventy --config config/eleventy.ts --serve",
