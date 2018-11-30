@@ -1,4 +1,5 @@
 [![Travis CI Build Status](https://travis-ci.com/isellsoap/francescoschwarz.com.svg?branch=master)](https://travis-ci.com/isellsoap/francescoschwarz.com)
+[![David](https://img.shields.io/david/isellsoap/francescoschwarz.com/master.svg)](https://david-dm.org/isellsoap/francescoschwarz.com)
 [![Known Vulnerabilities](https://snyk.io/test/github/isellsoap/francescoschwarz.com/badge.svg?targetFile=package.json)](https://snyk.io/test/github/isellsoap/francescoschwarz.com?targetFile=package.json)
 [![Twitter Follow](https://img.shields.io/twitter/follow/isellsoap.svg?style=social)](https://twitter.com/isellsoap)
 
