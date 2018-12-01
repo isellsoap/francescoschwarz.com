@@ -11,4 +11,4 @@ At software service provider **jambit** I designed and implemented websites and 
 
 Today I work at **censhare** to improve the workflow between designers and developers by implementing and advancing design systems, always with a strong focus on semantic HTML, maintainable CSS architectures, and accessibility.
 
-You can head over to the [blog](/blog/), check out my [projects](/projects/), or get in touch with me via [Twitter]({{ app.author.twitter }}), [GitHub]({{ app.author.github }}), [LinkedIn]({{ app.author.linkedin }}) or [email](mailto:{{ app.author.email }}).
+Head over to the [blog](/blog/), check out my [projects](/projects/), or get in touch with me via [Twitter]({{ app.author.twitter }}), [GitHub]({{ app.author.github }}), [LinkedIn]({{ app.author.linkedin }}) or [email](mailto:{{ app.author.email }}).
