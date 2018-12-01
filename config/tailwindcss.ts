@@ -208,7 +208,6 @@ module.exports = {
       'sans-serif'
     ],
     serif: [
-      'IBM Plex Serif',
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
