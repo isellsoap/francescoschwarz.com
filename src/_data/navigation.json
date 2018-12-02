@@ -27,6 +27,10 @@
       "url": "/feed.xml"
     },
     {
+      "label": "Credits",
+      "url": "/credits/"
+    },
+    {
       "label": "Legal notice",
       "url": "/legal-notice/"
     },
