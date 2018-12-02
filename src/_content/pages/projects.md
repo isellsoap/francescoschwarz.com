@@ -4,7 +4,7 @@ summary: A selection of projects I initiated or was involved in.
 permalink: projects/index.html
 ---
 
-### 👨🏻‍💻 Work-related projects
+### 👨‍💻 Work-related projects
 
 #### Frankfurter Allgemeine Zeitung{lang="de"}
 
@@ -20,7 +20,7 @@ From 2013 to 2016 I was part of a team at the SZ that launched a range of projec
 
 In 2015 I was responsible for the relaunch of the website of my [former employer jambit](https://www.jambit.com/), which was the [selected site of the week](https://weekly.pw/issue/75/) in the <cite>ProcessWire Weekly</cite>. At jambit I also initiated and organized the “Community of practice Frontend” to raise awarness for frontend topics.
 
-### 👨🏻‍🎨 Side projects
+### 👨‍🎨 Side projects
 
 #### Specificity Visualizer
 
