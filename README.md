@@ -63,9 +63,9 @@ francescoschwarz.com/
 │   ├── _includes/             # Components and layout templates (Liquid)
 │   ├── assets/                # Assets (CSS, TypeScript, fonts, EJS templates, …)
 │   ├── images/                # Content images
+│   ├── app.webmanifest.liquid # Web App Manifest template
 │   ├── feed.json.liquid       # RSS (JSON Feed) template
 │   ├── feed.xml.liquid        # RSS (Atom) template
-│   ├── manifest.json.liquid   # Web App Manifest template
 │   ├── robots.txt.liquid      # robots.txt template
 │   └── sitemap.xml.liquid     # Sitemap template
 │
