@@ -10,7 +10,7 @@ permalink: projects/index.html
 
 <!--alex ignore die-->
 
-From 2016 to 2017 I was a leading part of the team that launched the redesigned website of the FAZ, one of Germany’s largest daily newspapers with millions of daily visitors. Read what the chief editor at the time wrote about the relaunch in <cite>[Layout, Technik, Ladezeit: Das sind die neuen Seiten von FAZ.NET](http://www.faz.net/aktuell/layout-technik-ladezeit-das-sind-die-neuen-seiten-von-faz-net-15172231.html){lang="de"}</cite>.
+From 2016 to 2017 I was a leading part of the team that launched the redesigned website of the FAZ, one of Germany’s most significant newspapers with millions of daily visitors. Read what the chief editor at the time wrote about the relaunch in <cite>[Layout, Technik, Ladezeit: Das sind die neuen Seiten von FAZ.NET](http://www.faz.net/aktuell/layout-technik-ladezeit-das-sind-die-neuen-seiten-von-faz-net-15172231.html){lang="de"}</cite>.
 
 #### Süddeutsche Zeitung{lang="de"}
 
