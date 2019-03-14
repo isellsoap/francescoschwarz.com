@@ -9,6 +9,8 @@ type: homepage
 
 At software service provider **jambit** I designed and implemented websites and frontend features for numerous organisations, amongst others **Süddeutsche Zeitung**{lang="de"} and **Frankfurter Allgemeine Zeitung**{lang="de"}. For the latter, I was a leading part of the team that launched the redesigned website in 2017.
 
-Today I work at **censhare** to improve the workflow between designers and developers by implementing and advancing design systems, always with a strong focus on semantic HTML, maintainable CSS architectures, and accessibility.
+At **censhare** I improved the workflow between designers and developers by implementing and advancing design systems, always with a strong focus on semantic HTML, maintainable CSS architectures, and accessibility.
+
+Today I work at **Süddeutsche Zeitung**{lang="de"} to maintain and develop [sz.de](https://www.sueddeutsche.de/), together with a fantastic team of testers, designers, analysts and developers. 🚀
 
 Head over to the [blog](/blog/), check out my [projects](/projects/), or get in touch with me via [Twitter]({{ app.author.twitter }}), [GitHub]({{ app.author.github }}), [LinkedIn]({{ app.author.linkedin }}) or [email](mailto:{{ app.author.email }}).
