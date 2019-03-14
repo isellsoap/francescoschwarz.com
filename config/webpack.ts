@@ -3,7 +3,7 @@ import * as glob from 'glob';
 import * as path from 'path';
 
 // webpack plugins
-import * as CleanWebpackPlugin from 'clean-webpack-plugin';
+import CleanWebpackPlugin from 'clean-webpack-plugin';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as PurgecssWebpackPlugin from 'purgecss-webpack-plugin';
 import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
@@ -72,9 +72,7 @@ export default (env, argv) => {
       rules: [rules.fonts, rules.tslint, rules.ts, rules.styles]
     },
     plugins: [
-      new CleanWebpackPlugin(['dist'], {
-        root: path.resolve(__dirname, '..')
-      }),
+      new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
         filename: 'styles/main.[contenthash].css'
       }),
