@@ -12,6 +12,5 @@
   "MD035": { "style": "---" },
   "MD040": false,
   "MD041": false,
-  "MD044": { "names": ["JavaScript"] },
-  "emphasis-style": { "style": "*" }
+  "MD044": { "names": ["JavaScript"] }
 }

@@ -22,6 +22,7 @@ module.exports = {
       ],
       require('markdown-it-attrs'),
       require('markdown-it-deflist'),
+      require('markdown-it-emph'),
       require('markdown-it-footnote'),
       require('markdown-it-table-of-contents')
     ];

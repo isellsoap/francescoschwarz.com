@@ -6,6 +6,13 @@ layout: layout/base
     {% include 'content-heading.liquid' %}
     <time datetime="{{ date | date: dates.iso }}" class="-order-1 mb-1 text-grey-darker text-sm">{{ date | date: dates.long }}</time>
   </header>
+
+  {%- if series == "today-i-learned" -%}
+    <aside class="italic">
+      <p><span class="roman">☝️</span> This post is part of my “Today I learned” series in which I share all my everyday learnings, discoveries, and quick tips.</p>
+    </aside>
+  {%- endif -%}
+
   {{ content }}
 
     <hr class="mt-16">
