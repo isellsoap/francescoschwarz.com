@@ -9,6 +9,7 @@ tags:
   - safari
   - navigation
   - keyboard
+  - accessibility
 ---
 By default Firefox and Safari on MacOS behave a little weirdly when it comes to tab navigation on websites in that only a few elements on a website a tabable at all (if you are lucky). I experienced this broken behavior together with a colleague during testing the tab navigation behavior for [sz.de](https://www.sueddeutsche.de/).
 
