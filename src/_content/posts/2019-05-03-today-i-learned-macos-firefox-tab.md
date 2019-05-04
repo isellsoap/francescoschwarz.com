@@ -11,7 +11,7 @@ tags:
   - keyboard
   - accessibility
 ---
-By default Firefox and Safari on MacOS behave a little weirdly when it comes to tab navigation on websites in that only a few elements on a website a tabable at all (if you are lucky). I experienced this broken behavior together with a colleague during testing the tab navigation behavior for [sz.de](https://www.sueddeutsche.de/).
+By default Firefox and Safari on MacOS behave a little weirdly when it comes to tab navigation on websites in that only a few elements on a website are tabable at all (if you are lucky). I experienced this broken behavior together with a colleague during testing the tab navigation behavior for [sz.de](https://www.sueddeutsche.de/).
 
 Active normal tab navigation in **Firefox** by going into the MacOS keyboard settings, click on “Shortcuts” at the top, and activate the “All controls” radio button at the bottom.
 
