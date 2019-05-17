@@ -155,7 +155,7 @@ Rob’s talk was all about overcoming challenges, how important it is to always 
 
 <!--alex disable european-->
 
-[**‌Fabien Benetou**](https://twitter.com/utopiah/), a WebXR consultant at the Innovation Lab of the European Parliament and a Mozilla Tech Speaker, showed us the state of Virtual and Augmented Reality (VR/AR) in the browser by explaining the technologies surrounding these buzz words. It was kind of a plea for the open-source work done by Mozilla, which I like a lot.
+[**‌Fabien Benetou**](https://twitter.com/utopiah/) (WebXR consultant at the Innovation Lab of the European Parliament, Mozilla Tech Speaker and working for the UNICEF Innovation fund) showed us the state of Virtual and Augmented Reality (VR/AR) in the browser by explaining the technologies surrounding these buzz words. It was kind of a plea for the open-source work done by Mozilla, which I like a lot.
 
 <!--alex enable european-->
 
