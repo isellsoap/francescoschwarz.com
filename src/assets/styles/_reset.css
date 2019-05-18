@@ -14,7 +14,8 @@
 
 html {
   box-sizing: border-box;
-  /* Prevent adjustments of font size after orientation changes in iOS. */
+  /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. */
+  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -25,10 +26,10 @@ main {
   @apply .bg-white;
 }
 
-@media screen and (min-width: config('screens.xl')) {
+@media screen and (min-width: theme('screens.lg')) {
   main {
     @apply .bg-transparent;
-    background-image: linear-gradient(-90deg, config('colors.white') 50vw, transparent 0);
+    background-image: linear-gradient(-90deg, theme('colors.white') 50vw, transparent 0);
   }
 }
 
@@ -41,8 +42,7 @@ main {
  */
 hr {
   box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  @apply .border-0 .border-b .border-solid .border-grey .w-1/3 .overflow-visible .text-left;
+  @apply .border-0 .border-b .border-solid .border-gray-500 .h-0 .w-1/3 .overflow-visible .text-left;
 }
 
 blockquote {
@@ -54,7 +54,7 @@ blockquote p:last-child {
 }
 
 figcaption {
-  @apply .mt-3 .leading-tight .text-xs .text-grey-darker;
+  @apply .mt-3 .leading-tight .text-xs .text-gray-600;
 }
 
 figcaption a {
@@ -95,8 +95,7 @@ ol ul {
 
 ul,
 ol {
-  list-style-position: outside;
-  @apply .ml-6;
+  @apply .ml-6 .list-outside;
 }
 
 dd {
@@ -111,7 +110,7 @@ dd + dt {
    ========================================================================== */
 
 a {
-  @apply .text-blue-dark .bg-transparent;
+  @apply .text-blue-600 .bg-transparent;
 }
 
 a:focus,
@@ -120,7 +119,7 @@ a:hover {
 }
 
 a:focus {
-  outline: 5px dashed config('colors["blue-dark"]');
+  outline: 5px dashed theme('colors.blue.600');
   outline-offset: 2px;
 }
 
@@ -157,15 +156,15 @@ sup {
 }
 
 mark {
-  @apply .bg-yellow-lighter;
+  @apply .bg-yellow-200;
 }
 
 del {
-  @apply .bg-red-lighter;
+  @apply .bg-red-200;
 }
 
 ins {
-  @apply .no-underline .bg-green-lighter;
+  @apply .no-underline .bg-green-200;
 }
 
 /* Embedded content
@@ -188,7 +187,7 @@ dt {
 
 h3,
 h4  {
-  @apply .leading-tighter .mb-4;
+  @apply .leading-tight .mb-4;
 }
 
 h3,
@@ -215,14 +214,58 @@ p,
 ul,
 ol,
 dl {
-  hyphens: auto;
+  /**
+     * Read http://clagnut.com/blog/2395/ for more info about the
+     * `hyphenate-*` properties.
+     *
+     * For now these properties are still too new for the tools we are using:
+     *
+     *   - Autoprefixer doesn’t prefix them yet (see https://github.com/postcss/autoprefixer/issues/826)
+     *   - csstree/validator complains, although these are valid CSS properties.
+     *   - On caniuse.com you still can’t see info about these properties
+     *     (although it’s already in discussion, see https://github.com/Fyrd/caniuse/issues/2155)
+     *
+     * The `hyphenate-*` properties are already supported by IE and Edge, and
+     * support for other browsers will grow with time. Perfect example of
+     * progressive enhancement.
+     */
+
+    -webkit-hyphenate-limit-after: 3; /* legacy */
+    -webkit-hyphenate-limit-before: 3; /* legacy */
+    -webkit-hyphenate-limit-chars: 6 3 3;
+    -moz-hyphenate-limit-chars: 6 3 3;
+    -ms-hyphenate-limit-chars: 6 3 3;
+    hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphenate-limit-last: always;
+    -moz-hyphenate-limit-last: always;
+    -ms-hyphenate-limit-last: always;
+    hyphenate-limit-last: always;
+    -webkit-hyphenate-limit-lines: 2;
+    -moz-hyphenate-limit-lines: 2;
+    -ms-hyphenate-limit-lines: 2;
+    hyphenate-limit-lines: 2;
+    -webkit-hyphenate-limit-zone: 8%;
+    -moz-hyphenate-limit-zone: 8%;
+    -ms-hyphenate-limit-zone: 8%;
+    hyphenate-limit-zone: 8%;
+
+    hyphens: auto;
+}
+
+@media screen and (min-width: theme('screens.lg')) {
+  p,
+  ul,
+  ol,
+  dl {
+    hyphens: none;
+  }
 }
 
 pre,
 code,
 mark,
 ins {
-  color: #000;
+  @apply .text-black;
 }
 
 /**
@@ -236,7 +279,7 @@ code {
   @apply .font-mono .text-left .break-normal .whitespace-pre;
   font-size: 1em; /* 2 */
   tab-size: 4;
-  text-shadow: 0 1px config('colors.white');
+  text-shadow: 0 1px theme('colors.white');
   word-break: normal;
   word-spacing: normal;
 }
@@ -252,7 +295,7 @@ code ::selection {
 pre,
 :not(pre) > code,
 blockquote {
-  @apply .bg-grey-lighter;
+  @apply .bg-gray-200;
 }
 
 pre,

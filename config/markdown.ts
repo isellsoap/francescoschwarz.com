@@ -1,4 +1,4 @@
-const permalinkClasses = 'text-grey hover:text-grey-dark font-normal no-underline';
+const permalinkClasses = 'text-gray-400 hover:text-gray-500 focus:text-gray-500 font-normal no-underline';
 
 module.exports = {
   markdown: (function() {

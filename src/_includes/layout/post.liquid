@@ -4,19 +4,19 @@ layout: layout/base
 <article>
   <header class="flex flex-col">
     {% include 'content-heading.liquid' %}
-    <time datetime="{{ date | date: dates.iso }}" class="-order-1 mb-1 text-grey-darker text-sm">{{ date | date: dates.long }}</time>
+    <time datetime="{{ date | date: dates.iso }}" class="order-first mb-1 text-gray-600 text-sm">{{ date | date: dates.long }}</time>
   </header>
 
   {%- if series == "today-i-learned" -%}
     <aside class="italic">
-      <p><span class="roman">☝️</span> This post is part of my “Today I learned” series in which I share all my everyday learnings, discoveries, and quick tips.</p>
+      <p><span class="not-italic">☝️</span> This post is part of my “Today I learned” series in which I share all my everyday learnings, discoveries, and quick tips.</p>
     </aside>
   {%- endif -%}
 
   {{ content }}
 
   <hr class="mt-16">
-  <ul class="list-reset italic ml-0 mb-3 flex flex-col sm:flex-row sm:mb-0">
+  <ul class="list-none italic ml-0 mb-3 flex flex-col sm:flex-row sm:mb-0">
     {%- if twitterTimeline -%}
       <li class="flex items-center mb-2 sm:mb-0 sm:mr-4 lg:mr-6">
         <svg class="mr-1 fill-twitter w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" aria-hidden="true"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6a192.38 192.38 0 0 1-61.5 23.5A96.7 96.7 0 0 0 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8a96.97 96.97 0 0 0 90.5 67.3 194.11 194.11 0 0 1-143.4 40.1C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
