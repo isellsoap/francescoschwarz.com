@@ -31,7 +31,8 @@ module.exports = {
         mono: ['IBM Plex Mono', ...defaultTheme.fontFamily.mono]
       },
       screens: {
-        '2xl': '1440px'
+        // TODO: using `2xl` here as the key makes PurgeCSS not work correctly.
+        xxl: '1440px'
       }
     }
   }
