@@ -1,5 +1,5 @@
 ---
-title: How to generate dummy text in Word
+title: "TIL: How to generate dummy text in Word"
 summary: Short and sweet content creation.
 date: 2019-04-02
 series: today-i-learned

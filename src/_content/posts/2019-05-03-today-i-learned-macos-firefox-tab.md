@@ -1,5 +1,5 @@
 ---
-title: Normal tab navigation behavior in Firefox and Safari
+title: "TIL: Normal tab navigation behavior in Firefox and Safari"
 summary: Two tiny settings with a huge impact.
 date: 2019-05-03
 series: today-i-learned
