@@ -51,8 +51,16 @@ The specific problem I encountered with `display: inline;` together with a colle
 
 We talk about a layout that can only be achieved by `inline`ing the `dt` and `dd` elements of the `dl` element, thus you have to tackle the problem that sometimes there are weird gaps at the end of lines (see red arrow in the screenshot). Why does the browser break the line in such a weird way? Why doesn’t it try to fill up the whole line?
 
-I can’t give you an answer to these questions, but the root cause of the problem is (and here we go back to the beginning of this post) the **compressed markup** – so no line breaks and whitespace between HTML elements – of the second example in the screenshot. The first example of the screenshot uses pretty formatted markup.
+I can’t give you an answer to these questions <ins>(edit: I can now, check out the edit at the end of the article)</ins>, but the root cause of the problem is (and here we go back to the beginning of this post) the **compressed markup** – so no line breaks and whitespace between HTML elements – of the second example in the screenshot. The first example of the screenshot uses pretty formatted markup.
 
 The solution for us was to add an artificial extra space after each `dt` and `dd` element that won’t get compressed by our internally used HTML minifier. Additionally we added an extensive comment in the markup to explain why the space is necessary to add.
 
 Yes, browsers are weird sometimes.
+
+**Edit (22 May 2019):**
+
+[Šime Vidas pointed out](https://twitter.com/simevidas/status/1131186446767992832?s=20) to me on Twitter, why the browser is breaking the line in such a weird way:
+
+> My guess: Because the inline elements touch each other, there is no line break opportunity between them, so the browser treats the last word of the first element and the first word of the second element as one word.
+
+And it’s true: sum up the widths of the two words (as described in the tweet) and you can see that there is not enough space for the browser to render the “unified” word in the remaining space of the line, thus it breaks it to the next line. Makes perfect sense, thanks a lot Šime, for claryfing this! 👍
