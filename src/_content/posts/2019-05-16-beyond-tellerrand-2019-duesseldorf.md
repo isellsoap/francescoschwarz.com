@@ -62,7 +62,7 @@ The talk was nicely structured as it was basically a rant against (user) capital
 
 One important advice for me was to not only think about descriptively documenting implementation details (= describe what the software does for the user), but rather do a use case driven approach (= describe what users are doing with the software). This makes docs more relatable and human, which means: more useful.
 
-- [Carolyn’s website](http://carolyn.codes/)
+- [Carolyn’s website](https://carolyn.codes/)
 - [Carolyn’s profile on the beyond tellerrand website](https://beyondtellerrand.com/events/duesseldorf-2019/speakers/carolyn-stransky)
 - [watch the talk on Vimeo](https://vimeo.com/335856815)
 - [tweets surrounding the talk](https://twitter.com/search?q=%23btconf%20%40carolstran&src=typd)
@@ -147,7 +147,7 @@ Looking at his massive track record it was an impressively insightful talk, espe
 
 Rob’s talk was all about overcoming challenges, how important it is to always have a guiding principle you can follow, and that through persistence and hard work you will automatically create opportunities for yourself you never knew were possible in the first place.
 
-- [Rob’s website](http://www.robdraper.co.uk/)
+- [Rob’s website](https://www.robdraper.co.uk/)
 - [Rob’s profile on the beyond tellerrand website](https://beyondtellerrand.com/events/duesseldorf-2019/speakers/rob-draper)
 - [tweets surrounding the talk](https://twitter.com/search?q=%23btconf%20%40robdraper1&src=typd)
 
@@ -171,7 +171,7 @@ The talk was a bit unstructured and hard-to-follow at times, but interesting non
 
 <!--alex disable special-->
 
-#### Special appearance by the major
+#### Special appearance by the mayor
 
 <!--alex enable special-->
 
@@ -180,7 +180,7 @@ The talk was a bit unstructured and hard-to-follow at times, but interesting non
   alt: 'Thomas Geisel on stage, holding a microphone and rotated to the side towards Marc'
 %}
 
-Suprisingly the major of Düsseldorf, **[Thomas Geisel](https://www.duesseldorf.de/ob.html)**, also showed up and gave a little speech thanking Marc for all his efforts surrounding the conference. It was nice to see some official recognition and I thought that it was a really nice gesture of him and the city of Düsseldorf.
+Suprisingly the mayor of Düsseldorf, **[Thomas Geisel](https://www.duesseldorf.de/ob.html)**, also showed up and gave a little speech thanking Marc for all his efforts surrounding the conference. It was nice to see some official recognition and I thought that it was a really nice gesture of him and the city of Düsseldorf.
 
 <!--alex disable desire-->
 
@@ -198,7 +198,7 @@ Suprisingly the major of Düsseldorf, **[Thomas Geisel](https://www.duesseldorf.
 
 This was one of my favorite talks, I would recommend watching it. Super fun and awe-inspiring at the same time.
 
-- [David’s website](http://www.davidjdelgado.com/)
+- [David’s website](https://www.davidjdelgado.com/)
 - [David’s profile on the beyond tellerrand website](https://beyondtellerrand.com/events/duesseldorf-2019/speakers/david-delgado)
 - [watch the talk on Vimeo](https://vimeo.com/336041645)
 - [tweets surrounding the talk](https://twitter.com/search?q=%23btconf%20david%20delgado&src=typd)
@@ -297,7 +297,7 @@ It was a funny talk, but at the same time it also touched a lot of deep concepts
 
 #### “Flexbox holy Albatross”
 
-This was one of the few more technical talks at beyond tellerrand this year. **Heydon Pickering** did a step-by-step talk explaining a Flexbox trick that allows you to somewhat create a container query with pure CSS. Check out the [corresponding blog post](http://www.heydonworks.com/article/the-flexbox-holy-albatross-reincarnated) for the concepts behind it. Clever!
+This was one of the few more technical talks at beyond tellerrand this year. **Heydon Pickering** did a step-by-step talk explaining a Flexbox trick that allows you to somewhat create a container query with pure CSS. Check out the [corresponding blog post](https://www.heydonworks.com/article/the-flexbox-holy-albatross-reincarnated) for the concepts behind it. Clever!
 
 {% include 'figure' with '/images/2019/05/heydon-pickering-beyond-tellerrand-2019.jpg'
   linkExternal: 'https://twitter.com/fraktalisman/status/1128395052894568449'
@@ -305,7 +305,7 @@ This was one of the few more technical talks at beyond tellerrand this year. **H
   alt: 'Heydon on the beyond tellerrand stage.'
 %}
 
-- [Heydon’s website](http://www.heydonworks.com/)
+- [Heydon’s website](https://www.heydonworks.com/)
 - [Heydon’s profile on the beyond tellerrand website](https://beyondtellerrand.com/events/duesseldorf-2019/speakers/heydon-pickering)
 - [tweets surrounding the talk](https://twitter.com/search?q=%23btconf%20%40heydonworks&src=typd)
 
@@ -320,7 +320,7 @@ This was one of the few more technical talks at beyond tellerrand this year. **H
 
 As an alternative he suggests taking things in your own hands again by getting yourself a domain and a webspace that *you* own. He showed how you can link and enrich independently owned content with comments, likes, etc. by using modern standards like [Webmention](https://indieweb.org/Webmention). It was a really nice gesture of him to directly reference Matthias Ott’s excellent article <cite>[Into the Personal-Website-Verse](https://matthiasott.com/articles/into-the-personal-website-verse)</cite> which also talks about this topic in detail.
 
-- [Tantek’s website](http://tantek.com/)
+- [Tantek’s website](https://tantek.com/)
 - [Tantek’s profile on the beyond tellerrand website](https://beyondtellerrand.com/events/duesseldorf-2019/speakers/tantek-celik)
 - [watch the talk on Vimeo](https://vimeo.com/336343886)
 - [tweets surrounding the talk](https://twitter.com/search?q=%23btconf%20%40t&src=typd)
