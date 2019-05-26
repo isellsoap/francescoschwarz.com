@@ -2,9 +2,26 @@
 layout: layout/base
 ---
 <article>
-  <header class="flex flex-col">
+  <header class="leading-tight">
     {% include 'content-heading.liquid' %}
-    <time datetime="{{ date | date: dates.iso }}" class="order-first mb-1 text-gray-600 text-sm">{{ date | date: dates.long }}</time>
+    <ul class="list-none ml-0 flex">
+      <li class="{%- if updated -%}mr-8 sm:mr-12{%- endif -%}">
+        <span class="text-xs text-gray-500 block">Published:</span>
+        <time datetime="{{ date | date: dates.iso }}" class="mb-1 block text-sm text-gray-600">
+          {%- if updated -%}
+            {{ date | date: dates.long | handleShortMonthName }}
+          {% else %}
+            {{ date | date: dates.long }}
+          {%- endif -%}
+        </time>
+      </li>
+      {%- if updated -%}
+        <li>
+          <span class="text-xs text-gray-500 block">Updated:</span>
+          <time datetime="{{ updated | date: dates.iso }}" class="mb-1 block text-sm text-gray-600">{{ updated | date: dates.long | handleShortMonthName }}</time>
+        </li>
+      {%- endif -%}
+    </ul>
   </header>
 
   {%- if series == "today-i-learned" -%}

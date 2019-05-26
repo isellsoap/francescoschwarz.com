@@ -1,4 +1,4 @@
-const markdown = require('../markdown.ts').markdown;
+const markdown = require('../markdown.ts');
 
 /**
  * Convert a string of text to Markdown

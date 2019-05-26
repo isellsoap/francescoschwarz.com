@@ -2,6 +2,7 @@
 title: "TIL: Markup formatting can heavily influence layout of inline elements"
 summary: Watch out for inline-block and inline elements.
 date: 2019-05-22
+updated: 2019-05-22
 series: today-i-learned
 tags:
   - markup

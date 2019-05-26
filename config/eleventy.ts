@@ -8,6 +8,7 @@ module.exports = function(eleventy) {
   eleventy.addFilter('jsonify', require('./filters/jsonify.ts'));
   eleventy.addFilter('markdownify', require('./filters/markdownify.ts'));
   eleventy.addFilter('permalink', require('./filters/permalink.ts'));
+  eleventy.addFilter('handleShortMonthName', require('./filters/handleShortMonthName.ts'));
 
   // transforms
   eleventy.addTransform('minify', require('./transforms/minify.ts'));
@@ -16,7 +17,7 @@ module.exports = function(eleventy) {
   eleventy.setLiquidOptions(require('./liquid.ts'));
 
   // markdown
-  eleventy.setLibrary('md', require('./markdown.ts').markdown);
+  eleventy.setLibrary('md', require('./markdown.ts'));
 
   // plugins
   eleventy.addPlugin(require('@11ty/eleventy-plugin-inclusive-language'));

@@ -15,6 +15,9 @@ import * as OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 // postcss
 import postcssPlugins from './postcss';
 
+// other stuff
+const purgecssAllowlist = require('./purgecss-allowlist.ts');
+
 const rules = {
   fonts: {
     test: /\.woff2$/,
@@ -104,7 +107,7 @@ export default (env, argv) => {
     config.plugins = config.plugins.concat(
       new PurgecssWebpackPlugin({
         paths: () => glob.sync('./src/**/*.liquid'),
-        whitelist: require('./markdown.ts').permalinkClasses.split(' '),
+        whitelist: [purgecssAllowlist.handleShortMonthName, purgecssAllowlist.permalink].join(' ').split(' '),
         extractors: [
           {
             extractor: TailwindExtractor,
