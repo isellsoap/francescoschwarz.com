@@ -6,7 +6,7 @@
         <h3 itemprop="headline" class="mb-2">
           <a href="{{ item.url | permalink }}">{{ item.data.title | markdownify: 'inline' }}</a>
         </h3>
-        <time itemprop="dateCreated pubdate datePublished" datetime="{{ item.data.date | date: dates.iso }}" class="order-first text-gray-600 text-sm">{{ item.data.date | date: dates.long }}</time>
+        <time itemprop="dateCreated datePublished" datetime="{{ item.data.date | date: dates.iso }}" class="order-first text-gray-600 text-sm">{{ item.data.date | date: dates.long }}</time>
       </header>
       {%- if item.data.summary -%}
         <p class="mb-0">{{ item.data.summary | markdownify: 'inline' }}</p>

@@ -7,7 +7,7 @@ layout: layout/base
     <ul class="list-none ml-0 flex">
       <li class="{%- if updated -%}mr-8 sm:mr-12{%- endif -%}">
         <span class="text-xs text-gray-500 block">Published:</span>
-        <time itemprop="dateCreated pubdate datePublished" datetime="{{ date | date: dates.iso }}" class="mb-1 block text-sm text-gray-600">
+        <time itemprop="dateCreated datePublished" datetime="{{ date | date: dates.iso }}" class="mb-1 block text-sm text-gray-600">
           {%- if updated -%}
             {{ date | date: dates.long | handleShortMonthName }}
           {% else %}
