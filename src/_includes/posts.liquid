@@ -1,7 +1,7 @@
-<ol class="list-none ml-0" itemscope itemtype="http://schema.org/Blog">
+<ol class="list-none ml-0" itemscope itemtype="https://schema.org/Blog">
 {%- for item in items limit: itemsLimit -%}
   <li class="{% unless forloop.first %}pt-3{% endunless%} {% unless forloop.last %}pb-3 border-0 border-b border-solid border-gray-500{% endunless%}">
-    <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <article itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
       <header class="flex flex-col">
         <h3 itemprop="headline" class="mb-2">
           <a href="{{ item.url | permalink }}">{{ item.data.title | markdownify: 'inline' }}</a>
