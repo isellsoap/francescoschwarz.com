@@ -1,12 +1,12 @@
-<ol class="list-none ml-0">
+<ol class="list-none ml-0" itemscope itemtype="http://schema.org/Blog">
 {%- for item in items limit: itemsLimit -%}
   <li class="{% unless forloop.first %}pt-3{% endunless%} {% unless forloop.last %}pb-3 border-0 border-b border-solid border-gray-500{% endunless%}">
-    <article>
+    <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
       <header class="flex flex-col">
-        <h3 class="mb-2">
+        <h3 itemprop="headline" class="mb-2">
           <a href="{{ item.url | permalink }}">{{ item.data.title | markdownify: 'inline' }}</a>
         </h3>
-        <time datetime="{{ item.data.date | date: dates.iso }}" class="order-first text-gray-600 text-sm">{{ item.data.date | date: dates.long }}</time>
+        <time itemprop="dateCreated pubdate datePublished" datetime="{{ item.data.date | date: dates.iso }}" class="order-first text-gray-600 text-sm">{{ item.data.date | date: dates.long }}</time>
       </header>
       {%- if item.data.summary -%}
         <p class="mb-0">{{ item.data.summary | markdownify: 'inline' }}</p>

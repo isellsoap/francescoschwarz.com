@@ -1,13 +1,13 @@
 ---
 layout: layout/base
 ---
-<article>
+<article itemscope itemtype="http://schema.org/BlogPosting">
   <header class="leading-tight">
     {% include 'content-heading.liquid' %}
     <ul class="list-none ml-0 flex">
       <li class="{%- if updated -%}mr-8 sm:mr-12{%- endif -%}">
         <span class="text-xs text-gray-500 block">Published:</span>
-        <time datetime="{{ date | date: dates.iso }}" class="mb-1 block text-sm text-gray-600">
+        <time itemprop="dateCreated pubdate datePublished" datetime="{{ date | date: dates.iso }}" class="mb-1 block text-sm text-gray-600">
           {%- if updated -%}
             {{ date | date: dates.long | handleShortMonthName }}
           {% else %}
@@ -18,7 +18,7 @@ layout: layout/base
       {%- if updated -%}
         <li>
           <span class="text-xs text-gray-500 block">Updated:</span>
-          <time datetime="{{ updated | date: dates.iso }}" class="mb-1 block text-sm text-gray-600">{{ updated | date: dates.long | handleShortMonthName }}</time>
+          <time itemprop="dateModified" datetime="{{ updated | date: dates.iso }}" class="mb-1 block text-sm text-gray-600">{{ updated | date: dates.long | handleShortMonthName }}</time>
         </li>
       {%- endif -%}
     </ul>

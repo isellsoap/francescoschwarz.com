@@ -1,1 +1,1 @@
-<h2 class="text-2xl font-semibold mb-2">{{ title }}</h2>
+<h2 {% if type == 'post' %} itemprop="headline" {% endif %}class="text-2xl font-semibold mb-2">{{ title }}</h2>
