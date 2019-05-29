@@ -4982,15 +4982,15 @@ markdown-it-abbr@^1.0.4:
   resolved "https://registry.yarnpkg.com/markdown-it-abbr/-/markdown-it-abbr-1.0.4.tgz#d66b5364521cbb3dd8aa59dadfba2fb6865c8fd8"
   integrity sha1-1mtTZFIcuz3Yqlna37ovtoZcj9g=
 
-markdown-it-anchor@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-5.2.1.tgz#fa1450cfbef681c8804704972125de7197ebff6f"
-  integrity sha512-Z5WY30dljha9roE8Das0UKNrtz57bpwxnECHRiraataRK5+oZ+jk+6NZM6Jwowx0li5MOwJV9hP9LpeyLFQTWQ==
+markdown-it-anchor@^5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-5.2.3.tgz#76d07b5cfcf41a14cb6495522ed0f734ced337d9"
+  integrity sha512-KjEKPZNYoanmTECbh9x1bBsXGJ6dNUTxIFg5YhdBxYkx/+27LNVUzh7Ctlb7jxadgGCWMX9tt46Aaby7Af8xSg==
 
-markdown-it-attrs@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-attrs/-/markdown-it-attrs-2.4.0.tgz#f4c1dac952b4464483e7c50b5830b22562049b69"
-  integrity sha512-FJZqVPKMfooN1+HwBBvtkN3XpkcQirWDsw0LsOYJxPfOTncEueWeuI5S8iSy0NSQFMJcOfNBxpcnsI+E64XCeg==
+markdown-it-attrs@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/markdown-it-attrs/-/markdown-it-attrs-2.4.1.tgz#4868d067b0615568afc027bb99dfa2badb7ca1bc"
+  integrity sha512-BASnIYS+JLpjlhDf7jLV8VOuccxjfDDnQcz5dLfgPsYw8OsgbASexADdIkF7tIdGn+jaQSA4qOZXM3v3W3JBCg==
 
 markdown-it-deflist@^2.0.3:
   version "2.0.3"
@@ -8799,10 +8799,10 @@ typescript@^3.0.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.3.tgz#0eb320e4ace9b10eadf5bc6103286b0f8b7c224f"
   integrity sha512-FFgHdPt4T/duxx6Ndf7hwgMZZjZpB+U0nMNGVCYPq0rEzWKjEDobm4J6yb3CS7naZ0yURFqdw9Gwc7UOh/P9oQ==
 
-typescript@^3.4.5:
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.5.tgz#2d2618d10bb566572b8d7aad5180d84257d70a99"
-  integrity sha512-YycBxUb49UUhdNMU5aJ7z5Ej2XGmaIBL0x34vZ82fn3hGvD+bgrMrVDpatgz2f7YxUMJxMkbWxJZeAvDxVe7Vw==
+typescript@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.1.tgz#ba72a6a600b2158139c5dd8850f700e231464202"
+  integrity sha512-64HkdiRv1yYZsSe4xC1WVgamNigVYjlssIoaH2HcZF0+ijsk5YK2g0G34w9wJkze8+5ow4STd22AynfO6ZYYLw==
 
 ua-parser-js@0.7.17:
   version "0.7.17"
