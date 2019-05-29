@@ -123,6 +123,18 @@ a:focus {
   outline-offset: 2px;
 }
 
+header[role="banner"] nav a,
+footer[role="contentinfo"] a {
+  @apply .text-inherit .border-0 .border-b .border-solid .border-gray-500 .no-underline;
+}
+
+header[role="banner"] nav a:focus,
+header[role="banner"] nav a:hover,
+footer[role="contentinfo"] a:focus,
+footer[role="contentinfo"] a:hover {
+  @apply .text-gray-700 .border-transparent;
+}
+
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
