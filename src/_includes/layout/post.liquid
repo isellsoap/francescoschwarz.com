@@ -30,7 +30,9 @@ layout: layout/base
     </aside>
   {%- endif -%}
 
-  {{ content }}
+  <div itemprop="articleBody">
+    {{ content }}
+  </div>
 
   <hr class="mt-16">
   <ul class="list-none italic ml-0 mb-3 flex flex-col sm:flex-row sm:mb-0">
