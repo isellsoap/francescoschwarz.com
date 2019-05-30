@@ -8,7 +8,7 @@ layout: layout/base
       <li class="{%- if updated -%}mr-8 sm:mr-12{%- endif -%}">
         <span class="text-xs text-gray-500 block">Published:</span>
         <time itemprop="dateCreated datePublished" datetime="{{ date | date: dates.iso }}" class="block text-sm text-gray-600 dt-published">
-          <a href="{{ url }}" class="text-inherit no-underline u-url" title="Permalink">
+          <a href="{{ url }}" class="text-inherit no-underline u-url u-uid" title="Permalink">
             {%- if updated -%}
               {{ date | date: dates.long | handleShortMonthName }}
             {% else %}
