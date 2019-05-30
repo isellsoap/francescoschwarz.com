@@ -8,7 +8,7 @@ layout: layout/base
       <li class="{%- if updated -%}mr-8 sm:mr-12{%- endif -%}">
         <span class="text-xs text-gray-500 block">Published:</span>
         <time itemprop="dateCreated datePublished" datetime="{{ date | date: dates.iso }}" class="block text-sm text-gray-600 dt-published">
-          <a href="{{ page.url | permalink }}" class="text-inherit no-underline u-url u-uid" title="Permalink">
+          <a href="{{ page.url | permalink }}" class="text-inherit no-underline u-url u-uid" title="Permalink" itemprop="url">
             {%- if updated -%}
               {{ date | date: dates.long | handleShortMonthName }}
             {% else %}
@@ -24,10 +24,10 @@ layout: layout/base
         </li>
       {%- endif -%}
       <!-- hidden, because we want this info to be available only for search engines, microformat scrapers, etc. -->
-      <li class="hidden" itemprop="author">
+      <li class="hidden">
         <span>Written by:</span>
-        <a href="/" class="p-author h-card" rel="author" itemprop="url" itemtype="https://schema.org/Person">
-          <img src="/images/app.jpg" class="u-photo" alt="">
+        <a href="/" class="p-author h-card" rel="author" itemprop="author publisher" itemtype="https://schema.org/Person">
+          <img src="/images/app.jpg" class="u-photo" itemprop="image" alt="">
           Francesco Schwarz
         </a>
       </li>
