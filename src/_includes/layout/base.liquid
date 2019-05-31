@@ -34,11 +34,11 @@
     <meta name="twitter:description" content="{{ pageSummary }}">
     {%- if type == 'post' and image.url -%}
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:image" content="{{ image.url | remove: '.jpg' }}-960w.jpg">
+      <meta name="twitter:image" content="{{ image.url | remove: '.jpg' | prepend: app.url }}-960w.jpg">
       <meta name="twitter:image:alt" content="{{ image.alt }}">
     {%- else -%}
       <meta name="twitter:card" content="summary">
-      <meta name="twitter:image" content="/images/app.jpg">
+      <meta name="twitter:image" content="{{ '/images/app.jpg' | prepend: app.url }}">
       <meta name="twitter:image:alt" content="Photo of Francesco Schwarz">
     {%- endif -%}
 
@@ -52,10 +52,10 @@
     <meta property="og:description" content="{{ pageSummary }}">
     <meta property="og:url" content="{{ pageCanonicalUrl }}">
     {%- if type == 'post' and image.url -%}
-      <meta name="og:image" content="{{ image.url | remove: '.jpg' }}-960w.jpg">
+      <meta name="og:image" content="{{ image.url | remove: '.jpg' | prepend: app.url }}-960w.jpg">
       <meta name="og:image:alt" content="{{ image.alt }}">
     {%- else -%}
-      <meta name="og:image" content="/images/app.jpg">
+      <meta name="og:image" content="{{ '/images/app.jpg' | prepend: app.url }}">
       <meta name="og:image:alt" content="Photo of Francesco Schwarz">
     {%- endif -%}
 
