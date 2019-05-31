@@ -30,6 +30,9 @@ module.exports = {
         sans: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
         mono: ['IBM Plex Mono', ...defaultTheme.fontFamily.mono]
       },
+      maxWidth: {
+        none: 'none'
+      },
       screens: {
         // TODO: using `2xl` here as the key makes PurgeCSS not work correctly.
         xxl: '1440px',
@@ -50,6 +53,12 @@ module.exports = {
           position: 'absolute',
           width: '1px',
           whiteSpace: 'nowrap'
+        },
+        '.ratio-21-9::before': {
+          backgroundColor: defaultTheme.colors.gray['100'],
+          content: '""',
+          display: 'block',
+          paddingTop: '42.85714%'
         }
       };
 

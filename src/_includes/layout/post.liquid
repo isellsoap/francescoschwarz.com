@@ -2,7 +2,7 @@
 layout: layout/base
 ---
 <article itemscope itemtype="https://schema.org/BlogPosting" class="h-entry">
-  <header class="leading-tight">
+  <header class="leading-tight flex flex-col">
     {% include 'content-heading.liquid' %}
     <ul class="list-none ml-0 flex">
       <li class="{%- if updated -%}mr-8 sm:mr-12{%- endif -%}">
@@ -32,6 +32,33 @@ layout: layout/base
         </a>
       </li>
     </ul>
+    {%- if image.url -%}
+      <noscript>
+        <figure class="relative ratio-21-9 mb-4 order-first max-w-xl -mt-6 -mx-3 sm:-mx-6 lg:-ml-12 lg:mr-0 lg:max-w-none">
+        <picture class="absolute inset-0">
+          <img
+            class="block w-full u-featured"
+            alt="{{ image.alt }}"
+            src="{{ image.url | remove: '.jpg' }}-960w.jpg"
+            itemprop="image"
+          >
+        </picture>
+      </figure>
+      </noscript>
+      <figure class="relative ratio-21-9 mb-4 order-first max-w-xl -mt-6 -mx-3 sm:-mx-6 lg:-ml-12 lg:mr-0 lg:max-w-none">
+        <picture class="absolute inset-0">
+          <img
+            class="lazyload block w-full u-featured"
+            alt="{{ image.alt }}"
+            data-sizes="(min-width: 1024px) 912px, 100vw"
+            data-srcset="{{ image.url | remove: '.jpg' }}-320w.jpg 320w, {{ image.url | remove: '.jpg' }}-640w.jpg 640w, {{ image.url | remove: '.jpg' }}-960w.jpg 960w, {{ image.url | remove: '.jpg' }}-1280w.jpg 1280w, {{ image.url | remove: '.jpg' }}-1600w.jpg 1600w, {{ image.url | remove: '.jpg' }}-1920w.jpg 1920w"
+            data-src="{{ image.url | remove: '.jpg' }}-960w.jpg"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            itemprop="image"
+          >
+        </picture>
+      </figure>
+    {%- endif -%}
   </header>
 
   {%- if series == "today-i-learned" -%}

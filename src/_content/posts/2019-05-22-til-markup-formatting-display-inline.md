@@ -10,6 +10,9 @@ tags:
   - compression
   - inline
   - inline-block
+image:
+  url: /images/main/2019/05/til-markup-formatting-display-inline.jpg
+  alt: Curved lines, extending on an uneven ground from the bottom towards the top of the image.
 ---
 Until now I was aware of the fact that the way you format `display: inline-block;` elements in your markup has a direct impact on how the elements are being rendered by the browser. Please read that again: *markup formatting influences the layout of elements.*
 

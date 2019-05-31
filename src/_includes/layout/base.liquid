@@ -1,32 +1,23 @@
+{%- capture pageCanonicalUrl -%}{% if canonical.url %}{{ canonical.url }}{% else %}{{ page.url | prepend: app.url | permalink }}{% endif %}{%- endcapture -%}
+
+{%- capture pageTitle -%}{% if type != 'homepage' %}{{ title | markdownify: 'inline' | strip_html }} | {% endif %}{{ app.title }}{%- endcapture -%}
+
+{%- capture pageSummary -%}{% if summary %}{{ summary | markdownify | strip_html | strip_newlines | strip }}{% else %}{{ app.description }}{% endif %}{%- endcapture -%}
+
 <!doctype html>
 <html lang="en" class="text-lg sm:text-xl md:text-2xl no-js">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     {% if hidden == true %}
       <meta name="robots" content="noindex, nofollow">
     {% else %}
-      <link rel="canonical" href="{% if canonical.url %}{{ canonical.url }}{% else %}{{ page.url | prepend: app.url | permalink }}{% endif %}">
+      <link rel="canonical" href="{{ pageCanonicalUrl }}">
     {% endif %}
-    {% include "hashed-assets/scripts-head.liquid" %}
-    {% include "hashed-assets/styles.liquid" %}
-    <title>{% if type != 'homepage' %}{{ title | markdownify: 'inline' | strip_html }} | {% endif %}{{ app.title }}</title>
-    <meta property="og:title" content="{% if title != '' %}{{ title | markdownify: 'inline' | strip_html }}{% else %}{{ app.title }}{% endif %}">
-    <meta property="og:description" name="description" content="{% if summary %}{{ summary | markdownify | strip_html | strip_newlines | strip }}{% else %}{{ app.description }}{% endif %}">
-    <meta property="og:url" content="{% if url %}{{ url }}{% else %}{{ page.url | prepend: app.url | permalink }}{% endif %}">
-    {%- if image -%}
-      <meta property="og:image" content="{{ image }}">
-      <meta name="twitter:card" content="summary_large_image">
-    {%- else -%}
-      <meta property="og:image" content="{{ app.icon | prepend: app.url }}">
-      <meta name="twitter:card" content="summary">
-    {%- endif -%}
-    <meta name="twitter:site" content="@isellsoap">
-    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Francesco Schwarz (RSS Atom Feed)">
-    <link rel="alternate" href="/feed.json" type="application/json" title="Francesco Schwarz (JSON Feed)">
-    <link rel="manifest" href="/app.webmanifest">
-    <link rel="apple-touch-icon" href="{{ app.icon }}" type="image/jpg">
+
+    <title>{{ pageTitle }}</title>
+
+    <meta name="description" content="{{ pageSummary }}">
 
     <!-- meta: me -->
     <meta name="author" content="Francesco Schwarz">
@@ -36,9 +27,49 @@
     <link rel="me" href="https://www.linkedin.com/in/francescoschwarz">
     <link rel="me" href="https://github.com/isellsoap">
 
+    <!-- meta: twitter -->
+    <meta name="twitter:site" content="@isellsoap">
+    <meta name="twitter:creator" content="@isellsoap">
+    <meta name="twitter:title" content="{{ pageTitle }}">
+    <meta name="twitter:description" content="{{ pageSummary }}">
+    {%- if type == 'post' and image.url -%}
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:image" content="{{ image.url | remove: '.jpg' }}-960w.jpg">
+      <meta name="twitter:image:alt" content="{{ image.alt }}">
+    {%- else -%}
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content="/images/app.jpg">
+      <meta name="twitter:image:alt" content="Photo of Francesco Schwarz">
+    {%- endif -%}
+
     <!-- meta: google -->
     <link rel="author" href="/">
-	  <link rel="publisher" href="/">
+    <link rel="publisher" href="/">
+
+    <!-- meta: open graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ pageTitle }}">
+    <meta property="og:description" content="{{ pageSummary }}">
+    <meta property="og:url" content="{{ pageCanonicalUrl }}">
+    {%- if type == 'post' and image.url -%}
+      <meta name="og:image" content="{{ image.url | remove: '.jpg' }}-960w.jpg">
+      <meta name="og:image:alt" content="{{ image.alt }}">
+    {%- else -%}
+      <meta name="og:image" content="/images/app.jpg">
+      <meta name="og:image:alt" content="Photo of Francesco Schwarz">
+    {%- endif -%}
+
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Francesco Schwarz (RSS Atom Feed)">
+    <link rel="alternate" href="/feed.json" type="application/json" title="Francesco Schwarz (JSON Feed)">
+
+    <link rel="manifest" href="/app.webmanifest">
+
+    <link rel="apple-touch-icon" href="{{ app.icon }}" type="image/jpg">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    {% include "hashed-assets/scripts-head.liquid" %}
+    {% include "hashed-assets/styles.liquid" %}
   </head>
   <body class="bg-gray-200 text-gray-800 font-sans antialiased leading-normal h-card">
     <header role="banner" class="py-3 md:py-6">
@@ -46,7 +77,7 @@
         <img src="/images/app.jpg" class="h-16 w-16 lg:h-24 lg:w-24 shadow-md rounded-full u-photo" alt="Francesco Schwarz">
         <div class="flex-grow ml-3 md:ml-6">
           <h1 class="text-lg mb-1 font-semibold leading-tight p-name">
-            <a href="/" class="text-inherit hover:text-gray-900 focus:text-gray-900 no-underline u-url" rel="me">{{ app.title }}</a>
+            <a href="/" class="text-inherit hover:text-gray-900 focus:text-gray-900 no-underline u-url" rel="me">Francesco Schwarz</a>
           </h1>
           <nav role="navigation">
             <ul class="list-none m-0 flex flex-wrap text-gray-600">
