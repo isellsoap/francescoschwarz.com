@@ -2,7 +2,12 @@
   <noscript>
       <img src="{{ figure }}" alt="{{ alt }}" class="block">
   </noscript>
-  <img data-src="{{ figure }}" alt="{{ alt }}" class="lazyload block">
+  <img
+    data-src="{{ figure }}"
+    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+    alt="{{ alt }}"
+    class="lazyload block"
+  >
 {% endcapture %}
 
 <figure>
