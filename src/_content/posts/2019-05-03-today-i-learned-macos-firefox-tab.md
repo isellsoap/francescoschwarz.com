@@ -10,6 +10,9 @@ tags:
   - navigation
   - keyboard
   - accessibility
+image:
+  url: /images/main/2019/05/today-i-learned-macos-firefox-tab.jpg
+  alt: Zoomed-in face of a fox with blurry grasses in the background.
 ---
 By default Firefox and Safari on MacOS behave a little weirdly when it comes to tab navigation on websites in that only a few elements on a website are tabable at all (if you are lucky). I experienced this broken behavior together with a colleague during testing the tab navigation behavior for [sz.de](https://www.sueddeutsche.de/).
 
