@@ -3,7 +3,7 @@ import * as glob from 'glob';
 import * as path from 'path';
 
 // webpack plugins
-import CleanWebpackPlugin from 'clean-webpack-plugin';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as PurgecssWebpackPlugin from 'purgecss-webpack-plugin';
 import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
