@@ -7,6 +7,9 @@ tags:
   - data
   - specificity
   - visualization
+image:
+  url: /images/main/2017/12/introducing-the-specificity-visualizer.jpg
+  alt: Abstract, colorful painting.
 twitterTimeline: '1063081655521460224'
 ---
 I built a tool which gives you a quick overview of selectors and their specificities across a CSS file in bird’s-eye view. Say hello to the <cite>[Specificity Visualizer](https://isellsoap.github.io/specificity-visualizer/)</cite>!
