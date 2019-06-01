@@ -7,6 +7,9 @@ canonical:
 tags:
   - processwire
   - publication
+image:
+  url: /images/main/2016/02/4-reasons-to-choose-processwire-as-your-next-cms.jpg
+  alt: Four Ananas fruits lined up at the bottom.
 ---
 An article I wrote titled <cite>[4 Reasons to Choose ProcessWire as Your Next CMS](http://code.tutsplus.com/articles/4-reasons-to-choose-processwire-as-your-next-cms--cms-25062)</cite> has been published on January 19th at [Envato Tuts+ Code](http://code.tutsplus.com/). That was the first time I wrote an article for a big magazine website, thus I was accordingly excited about the publication.
 
