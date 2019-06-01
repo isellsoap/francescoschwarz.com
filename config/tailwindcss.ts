@@ -23,7 +23,8 @@ module.exports = {
       colors: {
         inherit: 'inherit',
         twitter: '#55acee',
-        github: '#000000'
+        github: '#000',
+        rss: '#f60'
       },
       fill: theme => theme('colors'),
       fontFamily: {
