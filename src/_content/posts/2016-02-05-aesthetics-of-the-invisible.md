@@ -6,9 +6,12 @@ tags:
   - accessibility
   - aural ux
   - markup
+image:
+  url: /images/main/2016/02/aesthetics-of-the-invisible.jpg
+  alt: Shaped, curved rock walls.
 twitterTimeline: '1063054069026164738'
 ---
-I recently had that insight after browsing through the HTML markup of [zeit.de](https://www.zeit.de/) (which I do a lot after the [phenomenal redesign](https://www.edenspiekermann.com/projects/zeit-online/)). When you look at the heading structure of a teaser you notice two things:
+Sometimes one single hidden glyph in a HTML markup makes the difference between a good and an outstanding front-end. I recently had that insight after browsing through the HTML markup of [zeit.de](https://www.zeit.de/) (which I do a lot after the [phenomenal redesign](https://www.edenspiekermann.com/projects/zeit-online/)). When you look at the heading structure of a teaser you notice two things:
 
 1. The heading is actually marked up as a heading (weirdly enough not common on big German news websites).
 2. Between the subheadline and the headline is a hidden colon.
