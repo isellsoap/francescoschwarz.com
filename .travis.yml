@@ -6,6 +6,7 @@ addons:
   ssh_known_hosts:
     - $DEPLOY_HOST
   homebrew:
+    update: true
     packages:
       - proselint
 
