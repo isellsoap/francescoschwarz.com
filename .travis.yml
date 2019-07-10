@@ -8,6 +8,7 @@ addons:
   homebrew:
     packages:
       - proselint
+    update: true
 
 cache:
   yarn: true
