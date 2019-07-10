@@ -50,7 +50,7 @@
       "stylelint --fix",
       "git add"
     ],
-    "images/main/original/**/*.jpg": [
+    "src/images/main/original/**/*.jpg": [
       "yarn images",
       "git add"
     ],
