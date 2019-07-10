@@ -5,7 +5,7 @@ permalink: /index.html
 priority: 1
 type: homepage
 ---
-<!-- markdownlint-disable MD002 MD025 -->+
+<!-- markdownlint-disable MD002 MD025 -->
 
 ## Latest blog posts{.heading-space}
 
