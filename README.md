@@ -45,6 +45,14 @@ This site is deployed automatically by [Travis CI](https://travis-ci.com/) whene
 
 A lot of main blog post images are taken from [Pexels](https://www.pexels.com/), a database full of free images. The source image must be 1920 pixels wide and 823 pixels high.
 
+## Validating structured data
+
+Useful links for validating structured data:
+
+- [test tool for structured data by Google](https://search.google.com/structured-data/testing-tool)
+- [`h-card` validator](https://indiewebify.me/validate-h-card/)
+- [`h-entry` validator](https://indiewebify.me/validate-h-entry/)
+
 ## Project structure
 
 ```
