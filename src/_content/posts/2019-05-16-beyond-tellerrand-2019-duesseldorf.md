@@ -2,6 +2,7 @@
 title: Summary of beyond tellerrand 2019 in Düsseldorf
 summary: The ninth edition of btconf was a blast.
 date: 2019-05-16
+updated: 2019-07-10
 tags:
   - btconf
   - conference
@@ -25,14 +26,14 @@ The ninth edition of the beyond tellerrand conference in Düsseldorf took place 
 
 #### Breakfast session
 
-[**Liam Griffin**](https://twitter.com/liam_at_shopify) from Shopify kicked off day one with a nice little side event, dressed up as a breakfast session. It was basically an advertisement talk from and for Shopify. Liam explained the ecosystem surrounding the ecommerce shop system and gave an overview of the partner program, where freelancers from all around the world offer their services to clients big and small.
+[**Liam Griffin**](https://twitter.com/liam_at_shopify) from Shopify kicked off day one with a nice little side event, dressed up as a breakfast session. It was an advertisement talk from and for Shopify. Liam explained the ecosystem surrounding the ecommerce shop system and gave an overview of the partner program, where freelancers from all around the world offer their services to clients big and small.
 
 {% include 'figure' with '/images/2019/05/liam-griffin-beyond-tellerrand-2019.jpg'
   caption: 'Liam explaining the syntax of the templating language Liquid.'
   alt: 'Liam Griffin on stage, alongside a presentation slide featuring syntax features of Liquid.'
 %}
 
-It even got a bit technical (just a bit): Liam explained the syntax of the templating language [Liquid](https://help.shopify.com/en/themes/liquid) (written in Ruby), which was developed by Shopify in 2006. It also powers the templating of Shopify themes since then. One helpful resource is the [Liquid Cheat Sheet](https://www.shopify.com/partners/shopify-cheat-sheet), where all important syntax features are explained in a concise manner. One for the bookmarks!
+It even got a bit technical: Liam explained the syntax of the templating language [Liquid](https://help.shopify.com/en/themes/liquid) (written in Ruby), which was developed by Shopify in 2006. It also powers the templating of Shopify themes since then. One helpful resource is the [Liquid Cheat Sheet](https://www.shopify.com/partners/shopify-cheat-sheet), where all important syntax features are explained in a concise manner. One for the bookmarks!
 
 #### “All constraints are beautiful”
 
@@ -46,7 +47,7 @@ The first speaker, **Charlie Owen**, literally set the tone for all other talks 
   alt: 'Charlie on the beyond tellerrand stage.'
 %}
 
-The talk was nicely structured as it was basically a rant against (user) capitalism dressed up as a manifesto for promoting user needs and accessibility (also the density of swear words was just right). Beautifully chosen by Marc as the starting talk, as all following talks also addressed the topic of constraints in one way or the other. *Chapeau!*{lang="fr"}
+The talk was nicely structured as it was a rant against (user) capitalism dressed up as a manifesto for promoting user needs and accessibility (also the density of swear words was at the right level). Beautifully chosen by Marc as the starting talk, as all following talks also addressed the topic of constraints in one way or the other. *Chapeau!*{lang="fr"}
 
 - [Charlie’s website](https://www.sonniesedge.net/)
 - [Charlie’s profile on the beyond tellerrand website](https://beyondtellerrand.com/events/duesseldorf-2019/speakers/charlie-owen)
@@ -86,7 +87,7 @@ Among other things he explained the concept of the [“monomyth” or “hero’
   alt: 'Mike on the beyond tellerrand stage.'
 %}
 
-Besides the absolutely fascinating psychological and mythological concepts behind the hero’s journey (I will never look at movies the same way as I did before having listened to the talk) and the skilled way how Mike structured and presented it, what I took home with me is mainly this: quality matters and attention to detail matters. People are actively being shaped by the stories you tell them. Good stories produce positive and empathetic behavioral patterns; they remind humans of what it means to be human. Bad stories produce the opposite. And: the unconscious plays a huge part in how we as humans and the environment we live in are being shaped. For me this also directly relates to things like beauty (as a concept in life; check out [Stefan Sagmeister’s talk at the beyond tellerrand 2018](https://beyondtellerrand.com/events/munich-2018/speakers/stefan-sagmeister#talk) in Munich) or typography, in that their real value and importance is more often than not negated or just being ignored.
+Besides the absolutely fascinating psychological and mythological concepts behind the hero’s journey (I will never look at movies the same way as I did before having listened to the talk) and the skilled way how Mike structured and presented it, what I took home with me is mainly this: quality matters and attention to detail matters. People are actively being shaped by the stories you tell them. Good stories produce positive and empathetic behavioral patterns; they remind humans of what it means to be human. Bad stories produce the opposite. And: the unconscious plays a huge part in how we as humans and the environment we live in are being shaped. For me this also directly relates to things like beauty (as a concept in life; check out [Stefan Sagmeister’s talk at the beyond tellerrand 2018](https://beyondtellerrand.com/events/munich-2018/speakers/stefan-sagmeister#talk) in Munich) or typography, in that their real value and importance is more often than not negated or being ignored.
 
 - [Mike’s website](http://www.mikehill.design/)
 - [Mike’s profile on the beyond tellerrand website](https://beyondtellerrand.com/events/duesseldorf-2019/speakers/mike-hill)
@@ -124,7 +125,7 @@ It was a quite inspirational talk for me, in which I took away to look at my sur
 
 #### “Never snap to guides”
 
-Graphic design legend **David Carson** was next up. It was a rather “unique” talk in that he basically non-stop clicked through his work of arts, explaining along the way how he approached and solved design and typography problems with and for clients.
+Graphic design legend **David Carson** was next up. It was a rather “unique” talk in that he non-stop clicked through his work of arts, explaining along the way how he approached and solved design and typography problems with and for clients.
 
 {% include 'figure' with '/images/2019/05/david-carson-beyond-tellerrand-2019.jpg'
   linkExternal: 'https://twitter.com/bkastl/status/1127942175596122114'
@@ -220,7 +221,7 @@ This was one of my favorite talks, I would recommend watching it. Super fun and 
 
 The talk touched something that everyone of us experiences in our jobs: we oftentimes blindly follow somewhat established “best practices” (be it for design or for development stuff), without questioning why and how these practices became “best” in the first place. Why, for example, is the functionality of the hamburger icon (and the hidden navigation menu) so prevalent? He explained the psychological basis for why people start to follow the advice of other people without questioning them and how this cascade of behavior leads to a result, where, at the end, nobody knows what the reasoning behind the result was in the first place.
 
-His advice: Think critically. Go out of your comfort zone (just a little bit), because only then you learn, you improve, and eventually you will get better results. We should try to come up with solutions to hard problems on our own, by thinking about the specific problems we are trying to solve for our users. One of my favorite talks of the conference!
+His advice: Think critically. Go out of your comfort zone (a little bit), because only then you learn, you improve, and eventually you will get better results. We should try to come up with solutions to hard problems on our own, by thinking about the specific problems we are trying to solve for our users. One of my favorite talks of the conference!
 
 - [Stephen’s website](https://www.the-haystack.com/)
 - [Stephen’s profile on the beyond tellerrand website](https://beyondtellerrand.com/events/duesseldorf-2019/speakers/stephen-hay)
@@ -332,7 +333,7 @@ As an alternative he suggests taking things in your own hands again by getting y
 
 <!--alex disable white-->
 
-- The organisation of the whole event was superb. [Marc Thiele](https://marcthiele.com/) did a great job at choosing just the right combination of topics and speakers. Thanks, Marc!
+- The organisation of the whole event was superb. [Marc Thiele](https://marcthiele.com/) did a great job at choosing the right combination of topics and speakers. Thanks, Marc!
 - The venue, the [Capitol Theater](https://www.capitol-theater.de/), is really well suited for such an event as it is spacious inside and outside.
 - [Tobi Lessnow](http://www.tobi-lessnow.com/) was the DJ throughout the conference. He was live mixing in between sessions and it can’t be stated enough how important he is for the general vibe of the conference. He did such a good job, I sincerely love his music (you should check out his album [<cite>Twilight Traveller</cite> on Bandcamp](https://baldower.bandcamp.com/album/twilight-traveller)). Thanks, Tobi!
 - Every spoken word on the stage has been live captioned on a screen right next to the main stage, which was quite fascinating to look at. The captioning was brought to us by [White Coat Captioning](https://whitecoatcaptioning.com/), and Andrew from Scottland was our stenographer throughout the conference. Thanks, Andrew!
@@ -342,3 +343,5 @@ As an alternative he suggests taking things in your own hands again by getting y
 ### Conclusion
 
 Again, Marc did an excellent job at organizing this year’s edition of beyond tellerrand at Düsseldorf. It was such an inspirational and friendly event. Thank you, Marc! I’m happy I didn’t miss it.
+
+**Edit (7 July 2019):** adapted wording of a few formulations detected by Proselint.
