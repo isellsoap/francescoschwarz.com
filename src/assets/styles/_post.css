@@ -38,10 +38,22 @@
   text-decoration: none;
 }
 
+.post__meta-figure,
+.post__meta-figure-noscript-wrapper {
+  order: -1;
+}
+
 .post__meta-figure {
   margin: 0 calc(var(--spacing-3) * -1) var(--spacing-3);
-  order: -1;
   position: relative;
+}
+
+.no-js .post__meta-figure {
+  display: none;
+}
+
+.post__meta-figure-noscript-wrapper .post__meta-figure {
+  display: block;
 }
 
 .post__meta-figure::before {

@@ -36,17 +36,17 @@ layout: layout/base
     </ul>
     {%- if image.path -%}
     {% assign imagePath = image.path | prepend: "/images/main/processed" | remove: '.jpg' %}
-      <noscript>
+      <noscript class="post__meta-figure-noscript-wrapper">
         <figure class="post__meta-figure">
-        <picture class="post__meta-figure-inner">
-          <img
-            class="post__meta-img u-featured"
-            alt="{{ image.alt }}"
-            src="{{ imagePath }}-960w.jpg"
-            itemprop="image"
-          >
-        </picture>
-      </figure>
+          <picture class="post__meta-figure-inner">
+            <img
+              class="post__meta-img u-featured"
+              alt="{{ image.alt }}"
+              src="{{ imagePath }}-960w.jpg"
+              itemprop="image"
+            >
+          </picture>
+        </figure>
       </noscript>
       <figure class="post__meta-figure">
         <picture class="post__meta-figure-inner">
