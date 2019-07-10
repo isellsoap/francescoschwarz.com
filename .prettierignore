@@ -1,5 +1,9 @@
 .editorconfig
 .gitignore
+.vscode/
 README.md
 yarn.lock
 **/*.md
+
+dist/
+node_modules/
