@@ -100,8 +100,8 @@
       <div class="content-wrapper">
         <div class="main-footer__note{% if type == 'homepage' or page.url == '/about/' %} main-footer__note_hidden{% endif%} clearfix">
           <div class="main-footer__note-inner">
-            <img src="/images/app.jpg" class="main-footer__img u-photo{% if type == 'homepage' %} visually-hidden{% endif %}" alt="Francesco Schwarz">
-            <p class="main-footer__note-content p-note">I’m Francesco Schwarz, a Frontend Developer based in Munich, Germany. I’m passionate about the web and its technologies, but what I love most is to build experiences for people on the web that are responsive, fast, and accessible. Get in touch with me via <a href="https://twitter.com/isellsoap">Twitter</a>, <a href="https://github.com/isellsoap">GitHub</a>, <a href="https://www.linkedin.com/in/francescoschwarz">LinkedIn</a> or <a class="u-email" href="mailto:francesco.schwarz@posteo.de">email</a>.</p>
+            {% if type != 'homepage' %}<img src="/images/app.jpg" class="main-footer__img u-photo" alt="Francesco Schwarz">{% endif %}
+            <p class="main-footer__note-content p-note">I’m Francesco Schwarz, a Frontend Developer based in Munich, Germany. I’m passionate about the web and its technologies, but what I love most is to build experiences for people on the web that are responsive, fast, and accessible. Get in touch with me via <a href="https://mastodon.social/@isellsoap">Mastodon</a>, <a href="https://twitter.com/isellsoap">Twitter</a>, <a href="https://github.com/isellsoap">GitHub</a>, <a href="https://www.linkedin.com/in/francescoschwarz">LinkedIn</a> or <a class="u-email" href="mailto:francesco.schwarz@posteo.de">email</a>.</p>
           </div>
         </div>
         <div class="main-footer__end">

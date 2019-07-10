@@ -18,4 +18,4 @@ type: homepage
 
 <!-- markdownlint-enable MD002 MD025 -->
 
-You can get in touch with me via [Twitter](https://twitter.com/isellsoap), [GitHub](https://github.com/isellsoap), [LinkedIn](https://www.linkedin.com/in/francescoschwarz) or [email](mailto:francesco.schwarz@posteo.de). Be sure to subscribe to the [blog feed](/feed.xml), so you never miss an article. All the cool kids in town use RSS these days!
+You can get in touch with me via [Mastodon]({{ app.author.mastodon }}), [Twitter](https://twitter.com/isellsoap), [GitHub](https://github.com/isellsoap), [LinkedIn](https://www.linkedin.com/in/francescoschwarz) or [email](mailto:francesco.schwarz@posteo.de). Be sure to subscribe to the [blog feed](/feed.xml), so you never miss an article. All the cool kids in town use RSS these days!

@@ -11,4 +11,4 @@ At **censhare** I improved the workflow between designers and developers by impl
 
 Today I work at **Süddeutsche Zeitung**{lang="de"} to maintain and develop [sz.de](https://www.sueddeutsche.de/), together with a fantastic team of testers, designers, analysts and developers. 🚀
 
-Head over to the [blog](/blog/), check out my [projects](/projects/), or get in touch with me via [Twitter]({{ app.author.twitter }}), [GitHub]({{ app.author.github }}), [LinkedIn]({{ app.author.linkedin }}) or [email](mailto:{{ app.author.email }}).
+Head over to the [blog](/blog/), check out my [projects](/projects/), or get in touch with me via [Mastodon]({{ app.author.mastodon }}), [Twitter]({{ app.author.twitter }}), [GitHub]({{ app.author.github }}), [LinkedIn]({{ app.author.linkedin }}) or [email](mailto:{{ app.author.email }}).
