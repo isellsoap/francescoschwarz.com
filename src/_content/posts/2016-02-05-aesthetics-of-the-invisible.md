@@ -7,7 +7,7 @@ tags:
   - aural ux
   - markup
 image:
-  url: /images/main/2016/02/aesthetics-of-the-invisible.jpg
+  path: /2016/02/aesthetics-of-the-invisible.jpg
   alt: Shaped, curved rock walls.
 twitterTimeline: '1063054069026164738'
 ---

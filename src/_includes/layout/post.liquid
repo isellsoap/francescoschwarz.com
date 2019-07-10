@@ -34,14 +34,15 @@ layout: layout/base
         </a>
       </li>
     </ul>
-    {%- if image.url -%}
+    {%- if image.path -%}
+    {% assign imagePath = image.path | prepend: "/images/main/processed" | remove: '.jpg' %}
       <noscript>
         <figure class="post__meta-figure">
         <picture class="post__meta-figure-inner">
           <img
             class="post__meta-img u-featured"
             alt="{{ image.alt }}"
-            src="{{ image.url | remove: '.jpg' }}-960w.jpg"
+            src="{{ imagePath }}-960w.jpg"
             itemprop="image"
           >
         </picture>
@@ -53,8 +54,8 @@ layout: layout/base
             class="post__meta-img lazyload u-featured"
             alt="{{ image.alt }}"
             data-sizes="(min-width: 1060px) 972px, 100vw"
-            data-srcset="{{ image.url | remove: '.jpg' }}-320w.jpg 320w, {{ image.url | remove: '.jpg' }}-640w.jpg 640w, {{ image.url | remove: '.jpg' }}-960w.jpg 960w, {{ image.url | remove: '.jpg' }}-1280w.jpg 1280w, {{ image.url | remove: '.jpg' }}-1600w.jpg 1600w, {{ image.url | remove: '.jpg' }}-1920w.jpg 1920w"
-            data-src="{{ image.url | remove: '.jpg' }}-960w.jpg"
+            data-srcset="{{ imagePath }}-320w.jpg 320w, {{ imagePath }}-640w.jpg 640w, {{ imagePath }}-960w.jpg 960w, {{ imagePath }}-1280w.jpg 1280w, {{ imagePath }}-1600w.jpg 1600w, {{ imagePath }}-1920w.jpg 1920w"
+            data-src="{{ imagePath }}-960w.jpg"
             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             itemprop="image"
           >

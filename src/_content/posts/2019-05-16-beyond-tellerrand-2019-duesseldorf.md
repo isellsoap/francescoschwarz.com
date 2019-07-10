@@ -8,7 +8,7 @@ tags:
   - conference
   - talks
 image:
-  url: /images/main/2019/05/beyond-tellerrand-2019-duesseldorf.jpg
+  path: /2019/05/beyond-tellerrand-2019-duesseldorf.jpg
   alt: Ceiling of the main conference room with fancy lights.
 ---
 The ninth edition of the beyond tellerrand conference in Düsseldorf took place the 13th and 14th of May 2019. I went to the conference together with a colleague, and it was a blast. Enjoy a summary of all the talks and other side events surrounding the conference.

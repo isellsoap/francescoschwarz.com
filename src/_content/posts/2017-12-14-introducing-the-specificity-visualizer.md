@@ -8,7 +8,7 @@ tags:
   - specificity
   - visualization
 image:
-  url: /images/main/2017/12/introducing-the-specificity-visualizer.jpg
+  path: /2017/12/introducing-the-specificity-visualizer.jpg
   alt: Abstract, colorful painting.
 twitterTimeline: '1063081655521460224'
 ---

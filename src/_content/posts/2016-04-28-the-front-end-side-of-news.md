@@ -7,7 +7,7 @@ tags:
   - performance
   - websites
 image:
-  url: /images/main/2016/04/frontend-side-of-news.jpg
+  path: /2016/04/frontend-side-of-news.jpg
   alt: A cool dude with glasses carefully reading a newspaper.
 twitterTimeline: '1063059280822185984'
 ---

@@ -7,7 +7,7 @@ canonical:
 tags:
   - processwire
 image:
-  url: /images/main/2016/07/processwire-beginners-guide.jpg
+  path: /2016/07/processwire-beginners-guide.jpg
   alt: Screenshot of the PrcessWire website.
 twitterTimeline: '1063060739441729538'
 ---

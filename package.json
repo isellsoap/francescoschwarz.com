@@ -23,10 +23,11 @@
     "autofix": "concurrently \"prettier '**/*.{js,json,md}' --write\" \"yarn autofix:ts\" \"yarn autofix:css\"",
     "build:assets": "webpack --config=config/webpack.ts -p --progress --mode=production",
     "build:files": "ELEVENTY_ENV=production eleventy --config config/eleventy.ts",
-    "build": "yarn lint && yarn clean && yarn images && yarn build:assets && yarn build:files",
+    "build": "yarn lint && yarn clean && yarn build:assets && yarn build:files",
     "clean": "rimraf dist/",
-    "images:sizes": "mkdirp ./dist/images/main && batch-image-resizer -i ./src/images/main/ -o ./dist/images/main/ -s \"[320, 640, 960, 1280, 1600, 1920]\"",
-    "images": "yarn images:sizes",
+    "images:minify": "imageoptim './src/images/main/processed/'",
+    "images:sizes": "batch-image-resizer -i ./src/images/main/original/ -o ./src/images/main/processed/ -s \"[320, 640, 960, 1280, 1600, 1920]\"",
+    "images": "yarn images:sizes && yarn images:minify",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:markdown": "markdownlint ./src/_content/**/*.md",
     "lint:md": "concurrently \"yarn lint:markdown\" \"yarn lint:social\" \"yarn lint:prose\"",
@@ -49,14 +50,18 @@
       "stylelint --fix",
       "git add"
     ],
+    "images/main/original/**/*.jpg": [
+      "yarn images",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ],
     "*.md": [
       "markdownlint",
       "alex",
       "proselintjs",
-      "prettier --write",
-      "git add"
-    ],
-    "*.json": [
       "prettier --write",
       "git add"
     ],
@@ -102,7 +107,6 @@
     "markdownlint": "^0.15.0",
     "markdownlint-cli": "^0.17.0",
     "mini-css-extract-plugin": "^0.7.0",
-    "mkdirp": "^0.5.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-custom-media": "^7.0.8",
     "postcss-custom-properties": "^9.0.1",

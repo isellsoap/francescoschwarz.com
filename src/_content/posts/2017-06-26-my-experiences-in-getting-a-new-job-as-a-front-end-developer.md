@@ -6,7 +6,7 @@ tags:
   - companies
   - job
 image:
-  url: /images/main/2017/06/my-experiences-in-getting-a-new-job-as-a-front-end-developer.jpg
+  path: /2017/06/my-experiences-in-getting-a-new-job-as-a-front-end-developer.jpg
   alt: A person standing in front of a white board looking at user flow scribbles.
 twitterTimeline: '1063067817187127297'
 ---

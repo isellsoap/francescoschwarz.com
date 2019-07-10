@@ -6,7 +6,7 @@ addons:
   ssh_known_hosts:
     - $DEPLOY_HOST
   homebrew:
-    update: true
+    update: true # needed for Travis CI to successfully build
     packages:
       - proselint
 
