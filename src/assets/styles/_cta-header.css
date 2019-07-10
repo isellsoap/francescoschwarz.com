@@ -49,15 +49,15 @@
 @media (--viewport-xl) {
 
   .cta-header {
+    @mixin positiveSkew;
     margin-left: 0;
     margin-right: 0;
     padding: var(--spacing-6) var(--spacing-8) var(--spacing-8);
-    transform: skew(-5deg) rotate(0.5deg);
   }
 
   .cta-header__inner {
+    @mixin negativeSkew;
     font-size: var(--font-size-2xl);
-    transform: skew(5deg) rotate(-0.5deg);
   }
 
   .cta-header__homepage-img {
