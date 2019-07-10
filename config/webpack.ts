@@ -13,12 +13,6 @@ const rules = {
     test: /\.woff2$/,
     use: 'file-loader?name=fonts/[name].[hash].[ext]'
   },
-  tslint: {
-    enforce: 'pre',
-    exclude: /node_modules/,
-    test: /\.ts$/,
-    use: 'tslint-loader'
-  },
   ts: {
     test: /\.ts$/,
     exclude: /node_modules/,
@@ -52,7 +46,7 @@ export default (env, argv) => {
       publicPath: '/assets/'
     },
     module: {
-      rules: [rules.fonts, rules.tslint, rules.ts, rules.styles]
+      rules: [rules.fonts, rules.ts, rules.styles]
     },
     plugins: [
       new CleanWebpackPlugin(),
