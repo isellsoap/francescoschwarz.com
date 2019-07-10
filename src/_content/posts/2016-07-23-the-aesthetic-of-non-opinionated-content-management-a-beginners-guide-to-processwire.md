@@ -6,6 +6,9 @@ canonical:
   url: https://www.smashingmagazine.com/2016/07/the-aesthetic-of-non-opinionated-content-management-a-beginners-guide-to-processwire/
 tags:
   - processwire
+image:
+  url: /images/main/2016/07/processwire-beginners-guide.jpg
+  alt: Screenshot of the PrcessWire website.
 twitterTimeline: '1063060739441729538'
 ---
 After two published ProcessWire articles [in January](/blog/4-reasons-to-choose-processwire-as-your-next-cms/) and [in May](http://t3n.de/magazin/cms-processwire-echte-alternative-wordpress-ist-flexibel-241148/) this year, a third one was published on July 22nd at Smashing Magazine with the title <cite>[The Aesthetic Of Non-Opinionated Content Management: A Beginner’s Guide To ProcessWire](https://www.smashingmagazine.com/2016/07/the-aesthetic-of-non-opinionated-content-management-a-beginners-guide-to-processwire/)</cite>.

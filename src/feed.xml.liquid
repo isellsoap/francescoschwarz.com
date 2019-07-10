@@ -15,7 +15,8 @@ permalink: /feed.xml
   <link href="{{ app.url }}" rel="alternate" type="text/html"/>
   <icon>{{ app.icon | prepend: app.url }}</icon>
   <rights>&#169; {{ 'now' | date: '%Y' }} {{ app.author.name }}. Content Creative Commons licensed unless otherwise stated.</rights>
-  {%- for item in collections.post -%}
+  {% assign feedXmlItems = collections.post | reverse %}
+  {%- for item in feedXmlItems -%}
     <entry>
       <id>{{ item.url | prepend: app.url | permalink }}</id>
       <title>{{ item.data.title | markdownify: 'inline' | escape | strip_html | strip_newlines }}</title>

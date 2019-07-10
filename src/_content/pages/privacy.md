@@ -1,5 +1,6 @@
 ---
 title: Privacy
+summary: 'Long story short: no cookies, no server logs, no tracking. Read on for more information.'
 permalink: privacy/index.html
 priority: 0.5
 changefreq: yearly

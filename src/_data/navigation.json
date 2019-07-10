@@ -9,16 +9,8 @@
       "url": "/projects/"
     },
     {
-      "label": "Twitter",
-      "url": "https://twitter.com/isellsoap"
-    },
-    {
-      "label": "GitHub",
-      "url": "https://github.com/isellsoap"
-    },
-    {
-      "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/francescoschwarz"
+      "label": "About",
+      "url": "/about/"
     }
   ],
   "secondary": [

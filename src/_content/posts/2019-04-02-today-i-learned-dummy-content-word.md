@@ -5,6 +5,9 @@ date: 2019-04-02
 series: today-i-learned
 tags:
   - word
+image:
+  url: /images/main/2019/04/today-i-learned-dummy-content-word.jpg
+  alt: Zoomed-in photo of an open book, focus on the printed page and letters.
 ---
 Open Word, type in the following and hit enter:
 

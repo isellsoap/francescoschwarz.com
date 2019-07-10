@@ -1,5 +1,3 @@
-const handleShortMonthName = require('../purgecss-allowlist.ts').handleShortMonthName;
-
 /**
  * Wraps the first three letters of a string in a `span` element to be able to
  * shorten it with CSS in certain situations.
@@ -17,7 +15,7 @@ module.exports = str => {
 
   arr[arr.length - 2] = [
     month.substring(0, 3),
-    `<span class="${handleShortMonthName}">`,
+    `<span class="post__meta-month">`,
     month.substring(3, month.length),
     '</span>'
   ].join('');

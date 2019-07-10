@@ -13,7 +13,9 @@ permalink: /feed.json
     "name": "{{ app.author.name }}",
     "url": "{{ app.author.url }}"
   },
-  "items": [{% for item in collections.post %}
+  "items": [
+    {% assign feedJsonItems = collections.post | reverse %}
+    {% for item in feedJsonItems %}
     {
       "id": "{{ item.url | prepend: app.url | permalink }}",
       "url": "{{ item.url | prepend: app.url | permalink }}",

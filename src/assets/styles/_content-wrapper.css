@@ -1,0 +1,10 @@
+.content-wrapper {
+  margin: auto;
+  max-width: var(--spacing-168);
+  padding-left: var(--spacing-3);
+  padding-right: var(--spacing-3);
+}
+
+.content-wrapper__inner {
+  max-width: var(--spacing-136);
+}

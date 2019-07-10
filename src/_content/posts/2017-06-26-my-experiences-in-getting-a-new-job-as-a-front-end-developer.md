@@ -5,6 +5,9 @@ date: 2017-06-26
 tags:
   - companies
   - job
+image:
+  url: /images/main/2017/06/my-experiences-in-getting-a-new-job-as-a-front-end-developer.jpg
+  alt: A person standing in front of a white board looking at user flow scribbles.
 twitterTimeline: '1063067817187127297'
 ---
 February this year I started looking for a job as a Front-End Developer in a new company. After almost four years at [jambit](https://www.jambit.com/en/) it was time for me to leave the contractor business behind. My main motivation for leaving jambit was, in fact, that I didn’t want to work as a contractor anymore but rather work directly at a product company.

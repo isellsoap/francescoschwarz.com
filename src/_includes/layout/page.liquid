@@ -1,12 +1,15 @@
 ---
 layout: layout/base
 ---
-<header>
-  {% include 'content-heading.liquid' %}
-  {%- if summary -%}
-    <div class="text-xl">
-      {{ summary | markdownify }}
-    </div>
-  {%- endif -%}
+<header class="cta-header">
+  <div class="cta-header__inner">
+    {% include 'content-heading.liquid' %}
+    {%- if summary -%}
+      <p class="cta-header__intro">{{ summary | markdownify: 'inline' }}</p>
+    {%- endif -%}
+  <div>
 </header>
-{{ content }}
+
+<div class="content-wrapper__inner">
+  {{ content }}
+</div>

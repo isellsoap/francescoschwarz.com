@@ -1,22 +1,22 @@
 {% capture imgMarkup %}
   <noscript>
-      <img src="{{ figure }}" alt="{{ alt }}" class="block">
+      <img src="{{ figure }}" alt="{{ alt }}">
   </noscript>
   <img
     data-src="{{ figure }}"
     src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
     alt="{{ alt }}"
-    class="lazyload block"
+    class="lazyload"
   >
 {% endcapture %}
 
 <figure>
 {%- if linkHd -%}
-  <a href="{{ figure | hdify }}" class="block">
+  <a href="{{ figure | hdify }}" class="post__media-link">
     {{ imgMarkup }}
   </a>
 {%- elsif linkExternal -%}
-  <a href="{{ linkExternal }}" class="block">
+  <a href="{{ linkExternal }}" class="post__media-link">
     {{ imgMarkup }}
   </a>
 {%- else -%}

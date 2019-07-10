@@ -1,5 +1,3 @@
-const permalink = require('./purgecss-allowlist.ts').permalink;
-
 module.exports = (function() {
   const options = {
     html: true,
@@ -15,7 +13,7 @@ module.exports = (function() {
       require('markdown-it-anchor'),
       {
         permalink: true,
-        permalinkClass: permalink,
+        permalinkClass: 'permalink-anchor',
         permalinkSymbol: '#'
       }
     ],

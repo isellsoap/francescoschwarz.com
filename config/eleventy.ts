@@ -4,11 +4,12 @@ module.exports = function(eleventy) {
   eleventy.addCollection('sitemap', require('./collections/sitemap.ts'));
 
   // filters
+  eleventy.addFilter('handleShortMonthName', require('./filters/handleShortMonthName.ts'));
   eleventy.addFilter('hdify', require('./filters/hdify.ts'));
   eleventy.addFilter('jsonify', require('./filters/jsonify.ts'));
   eleventy.addFilter('markdownify', require('./filters/markdownify.ts'));
   eleventy.addFilter('permalink', require('./filters/permalink.ts'));
-  eleventy.addFilter('handleShortMonthName', require('./filters/handleShortMonthName.ts'));
+  eleventy.addFilter('reverse', require('./filters/reverse.ts'));
 
   // transforms
   eleventy.addTransform('minify', require('./transforms/minify.ts'));

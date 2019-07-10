@@ -1,22 +1,12 @@
-// node packages
 import * as glob from 'glob';
 import * as path from 'path';
-
-// webpack plugins
+import * as webpack from 'webpack';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
-import * as PurgecssWebpackPlugin from 'purgecss-webpack-plugin';
 import * as MiniCssExtractPlugin from 'mini-css-extract-plugin';
-
-// minification
 import * as UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 import * as OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
-
-// postcss
 import postcssPlugins from './postcss';
-
-// other stuff
-const purgecssAllowlist = require('./purgecss-allowlist.ts');
 
 const rules = {
   fonts: {
@@ -49,18 +39,8 @@ const rules = {
   }
 };
 
-// Custom PurgeCSS extractor for Tailwind that allows special characters in
-// class names.
-//
-// https://github.com/FullHuman/purgecss#extractor
-class TailwindExtractor {
-  static extract(content) {
-    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-  }
-}
-
 export default (env, argv) => {
-  let config = {
+  let config: webpack.Configuration = {
     mode: argv.mode,
     entry: { 'scripts/main': './src/assets/scripts/main.ts', 'scripts/lazysizes': './src/assets/scripts/lazysizes.ts' },
     output: {
@@ -103,19 +83,6 @@ export default (env, argv) => {
         ]
       }
     });
-
-    config.plugins = config.plugins.concat(
-      new PurgecssWebpackPlugin({
-        paths: () => glob.sync('./src/**/*.liquid'),
-        whitelist: [purgecssAllowlist.handleShortMonthName, purgecssAllowlist.permalink].join(' ').split(' '),
-        extractors: [
-          {
-            extractor: TailwindExtractor,
-            extensions: ['liquid']
-          }
-        ]
-      })
-    );
   }
 
   return config;

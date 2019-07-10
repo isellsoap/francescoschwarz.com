@@ -41,6 +41,10 @@ Files get compiled automatically and the browser refreshes automatically.
 
 This site is deployed automatically by [Travis CI](https://travis-ci.com/) whenever files are pushed to the `master` branch.
 
+## Blog post images
+
+A lot of main blog post images are taken from [Pexels](https://www.pexels.com/), a database full of free images. The source image must be 1920 pixels wide and 823 pixels high.
+
 ## Project structure
 
 ```
@@ -54,7 +58,6 @@ francescoschwarz.com/
 │   ├── liquid.ts              # Liquid configuration
 │   ├── markdown.ts            # Markdown configuration
 │   ├── postcss.ts             # PostCSS configuration
-│   ├── tailwindcss.ts         # Tailwind CSS configuration
 │   └── webpack.ts             # webpack configuration
 |
 ├── src/
@@ -74,9 +77,12 @@ francescoschwarz.com/
 ├── .editorconfig              # Text editor configuration
 ├── .gitignore                 # Files not tracked by Git
 ├── .markdownlint.json         # markdownlint configuration
+├── .npmrc                     # npm configuration
 ├── .nvmrc                     # nvm configuration
 ├── .prettierignore            # Files not processed by Prettier
 ├── .prettierrc                # Prettier configuration
+├── .stylelintignore           # Files not processed by stylelint
+├── .stylelintrc               # stylelint configuration
 ├── .travis.yml                # Travis CI configuration
 ├── deploy_rsa.enc             # Encrypted deploy key for Travis CI
 ├── package.json               # Node.js package manifest

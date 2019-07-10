@@ -1,0 +1,10 @@
+.permalink-anchor {
+  color: var(--color-gray-500);
+  font-weight: var(--font-weight-normal);
+  text-decoration: none;
+}
+
+.permalink-anchor:focus,
+.permalink-anchor:hover {
+  color: var(--color-gray-600);
+}

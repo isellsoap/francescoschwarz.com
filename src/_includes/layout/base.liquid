@@ -5,7 +5,7 @@
 {%- capture pageSummary -%}{% if summary %}{{ summary | markdownify | strip_html | strip_newlines | strip }}{% else %}{{ app.description }}{% endif %}{%- endcapture -%}
 
 <!doctype html>
-<html lang="en" class="text-lg sm:text-xl md:text-2xl no-js">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,6 +22,7 @@
     <!-- meta: me -->
     <meta name="author" content="Francesco Schwarz">
     <link rel="me" href="mailto:francesco.schwarz@posteo.de">
+    <link rel="me" href="https://mastodon.social/@isellsoap">
     <link rel="me" href="https://twitter.com/isellsoap">
     <link rel="me" href="https://www.xing.com/profile/Francesco_Schwarz">
     <link rel="me" href="https://www.linkedin.com/in/francescoschwarz">
@@ -71,44 +72,47 @@
     {% include "hashed-assets/scripts-head.liquid" %}
     {% include "hashed-assets/styles.liquid" %}
   </head>
-  <body class="bg-gray-200 text-gray-800 font-sans antialiased leading-normal h-card">
-    <header role="banner" class="py-3 md:py-6">
-      <div class="m-auto max-w-xl lg:max-w-2xl px-3 sm:px-6 lg:pl-12 flex items-center">
-        <img src="/images/app.jpg" class="h-16 w-16 lg:h-24 lg:w-24 shadow-md rounded-full u-photo" alt="Francesco Schwarz">
-        <div class="flex-grow ml-3 md:ml-6">
-          <h1 class="text-lg mb-1 font-semibold leading-tight p-name">
-            <a href="/" class="text-inherit hover:text-gray-900 focus:text-gray-900 no-underline u-url" rel="me">Francesco Schwarz</a>
-          </h1>
-          <nav role="navigation">
-            <ul class="list-none m-0 flex flex-wrap text-gray-600">
-              {% for item in navigation.primary %}
-                <li class="{% unless forloop.last %}mr-2 md:mr-3 lg:mr-4{% endunless%}">
-                  <a href="{{ item.url }}">{{ item.label }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          </nav>
-        </div>
+  <body class="h-card">
+    <header role="banner" class="main-header">
+      <div class="content-wrapper main-header__inner">
+        <h1 class="p-name">
+          <a href="/" class="main-header__title-link u-url" rel="me">Francesco Schwarz</a>
+        </h1>
+        <nav role="navigation">
+          <ul class="main-header__nav">
+            {% for item in navigation.primary %}
+              <li class="main-header__nav-item">
+                <a href="{{ item.url }}" class="main-header__nav-link">{{ item.label }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <main role="main" class="block">
-      <div class="m-auto max-w-xl lg:max-w-2xl pt-6 p-3 sm:p-6 lg:pl-12 lg:pr-16 bg-white">
-        {{ content }}
+    <main role="main">
+      <div class="content-wrapper">
+          {{ content }}
       </div>
     </main>
 
-    <footer role="contentinfo" class="py-3 md:py-6 text-gray-600">
-      <div class="m-auto max-w-xl lg:max-w-2xl px-3 sm:px-6 lg:pl-12 footer-inner">
-        <ul class="list-none flex flex-wrap ml-0">
+    <footer role="contentinfo" class="main-footer">
+      <div class="content-wrapper">
+        <div class="main-footer__note{% if type == 'homepage' or page.url == '/about/' %} main-footer__note_hidden{% endif%} clearfix">
+          <div class="main-footer__note-inner">
+            <img src="/images/app.jpg" class="main-footer__img u-photo{% if type == 'homepage' %} visually-hidden{% endif %}" alt="Francesco Schwarz">
+            <p class="main-footer__note-content p-note">I’m Francesco Schwarz, a Frontend Developer based in Munich, Germany. I’m passionate about the web and its technologies, but what I love most is to build experiences for people on the web that are responsive, fast, and accessible. Get in touch with me via <a href="https://twitter.com/isellsoap">Twitter</a>, <a href="https://github.com/isellsoap">GitHub</a>, <a href="https://www.linkedin.com/in/francescoschwarz">LinkedIn</a> or <a class="u-email" href="mailto:francesco.schwarz@posteo.de">email</a>.</p>
+          </div>
+        </div>
+        <div class="main-footer__end">
+        <ul class="main-footer__nav">
           {% for item in navigation.secondary %}
-            <li class="{% unless forloop.last %}mr-3 lg:mr-4{% endunless%}">
+            <li class="main-footer__nav-item">
               <a href="{{ item.url }}">{{ item.label }}</a>
             </li>
           {% endfor %}
         </ul>
-        <p class="italic p-note">I’m Francesco Schwarz, a Frontend Developer based in Munich, Germany. My passion is the web, and I love to think and talk about HTML, CSS, and JavaScript (in that order). Get in touch with me via <a href="https://twitter.com/isellsoap">Twitter</a>, <a href="https://github.com/isellsoap">GitHub</a>, <a href="https://www.linkedin.com/in/francescoschwarz">LinkedIn</a> or <a class="u-email" href="mailto:francesco.schwarz@posteo.de">email</a>.</p>
-        <p class="mb-0">This is the very bottom of the website. <span class="px-1">🙌</span> Thanks for stopping by!</p>
+        <p>This is the very bottom of the website. <span class="main-footer__emoji">🙌</span> Thanks for stopping by!</p>
       </div>
     </footer>
   </body>

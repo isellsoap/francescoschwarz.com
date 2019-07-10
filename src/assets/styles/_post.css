@@ -1,0 +1,158 @@
+.post__header {
+  display: flex;
+  flex-direction: column;
+  line-height: var(--line-height-tight);
+}
+
+.post__meta {
+  display: flex;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.post__meta-item--updated {
+  margin-left: var(--spacing-8);
+}
+
+.post__meta-item--hidden {
+  display: none;
+}
+
+.post__meta-label,
+.post__meta-value {
+  display: block;
+}
+
+.post__meta-label {
+  color: var(--color-gray-500);
+  font-size: var(--font-size-xs);
+}
+
+.post__meta-value {
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
+}
+
+.post__meta-permalink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post__meta-figure {
+  margin: 0 calc(var(--spacing-3) * -1) var(--spacing-3);
+  order: -1;
+  position: relative;
+}
+
+.post__meta-figure::before {
+  background-color: var(--color-gray-100);
+  content: '';
+  display: block;
+  padding-top: 42.85714%; /* ratio of 21:9 */
+}
+
+.post__meta-figure-inner {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.post__meta-img {
+  width: 100%;
+}
+
+.post__til {
+  font-style: italic;
+}
+
+.post__til-emoji {
+  font-style: normal;
+}
+
+.post__media-link {
+  display: block;
+}
+
+.post__foot-separator {
+  margin-top: var(--spacing-16);
+}
+
+.post__foot-meta {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  list-style-type: none;
+  margin: 0 0 var(--spacing-3);
+}
+
+.post__foot-meta-item {
+  align-items: center;
+  display: flex;
+}
+
+.post__foot-meta-item:not(:last-child) {
+  margin-bottom: var(--spacing-2);
+}
+
+.post__foot-meta-icon {
+  margin-right: var(--spacing-2);
+}
+
+.post__foot-meta-icon--rss {
+  align-self: flex-start;
+  fill: var(--color-rss);
+  height: var(--spacing-5);
+  margin-left: var(--spacing-1);
+  width: var(--spacing-5);
+}
+
+.post__foot-meta-icon--twitter,
+.post__foot-meta-icon--github {
+  height: var(--spacing-6);
+  width: var(--spacing-6);
+}
+
+.post__foot-meta-icon--twitter {
+  fill: var(--color-twitter);
+}
+
+.post__foot-meta-icon--github {
+  fill: var(--color-github);
+}
+
+@media (--viewport-m-max) {
+
+  .post__meta-month {
+    @mixin visuallyHidden;
+  }
+}
+
+@media (--viewport-m) {
+
+  .post__meta-item--updated {
+    margin-left: var(--spacing-12);
+  }
+}
+
+@media (--viewport-xl) {
+
+  .post__meta-figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .post__foot-meta {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  .post__foot-meta-item:not(:last-child) {
+    margin: 0 var(--spacing-6) 0 0;
+  }
+
+  .post__foot-meta-icon--rss {
+    margin-left: 0;
+  }
+}

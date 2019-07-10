@@ -1,1 +1,3 @@
-<h2 {% if type == 'post' %} itemprop="headline" {% endif %}class="text-2xl font-semibold mb-2{% if type == 'post' %} p-name{% endif %}">{{ title }}</h2>
+{% if type != 'homepage' %}
+  <h2 {% if type == 'post' %} itemprop="headline"{% endif %}{% if type == 'post' %} class="p-name"{% endif %}>{{ title }}</h2>
+{% endif %}

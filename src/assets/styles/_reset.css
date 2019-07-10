@@ -1,3 +1,4 @@
+/* RESET CSS */
 *,
 *::before,
 *::after {
@@ -6,7 +7,8 @@
 
 * {
   font-size: 100%;
-  @apply .m-0 .p-0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Document
@@ -14,176 +16,34 @@
 
 html {
   box-sizing: border-box;
+  font-size: var(--font-size-lg);
+
   /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. */
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; /* stylelint-disable-line property-no-vendor-prefix */
+  -webkit-text-size-adjust: 100%; /* stylelint-disable-line property-no-vendor-prefix */
 }
 
-/* Sections
-   ========================================================================== */
+@media (--viewport-m) {
 
-main {
-  @apply .bg-white;
-}
-
-@media screen and (min-width: theme('screens.lg')) {
-  main {
-    @apply .bg-transparent;
-    background-image: linear-gradient(-90deg, theme('colors.white') 50vw, transparent 0);
+  html {
+    font-size: var(--font-size-xl);
   }
 }
 
-/* Grouping content
-   ========================================================================== */
+@media (--viewport-l) {
 
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box; /* 1 */
-  @apply .border-0 .border-b .border-solid .border-gray-500 .h-0 .w-1/3 .overflow-visible .text-left;
+  html {
+    font-size: var(--font-size-2xl);
+  }
 }
 
-blockquote {
-  @apply .italic;
-}
-
-blockquote p:last-child {
-  @apply .mb-0;
-}
-
-figcaption {
-  @apply .mt-3 .leading-tight .text-xs .text-gray-600;
-}
-
-figcaption a {
-  @apply .text-inherit;
-}
-
-/* Headings
-   ========================================================================== */
-
-h3,
-h4 {
-  /* Little optical adjustment to counter-balance tighter line height. */
-  @apply pt-1;
-}
-
-h3 {
-  @apply .text-xl;
-}
-
-h4,
-h5 {
-  @apply .text-base;
-}
-
-h5 {
-  @apply .font-normal;
-}
-
-/* Lists
-   ========================================================================== */
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  @apply mb-0;
-}
-
-ul,
-ol {
-  @apply .ml-6 .list-outside;
-}
-
-dd {
-  @apply .ml-3;
-}
-
-dd + dt {
-  @apply .mt-3;
-}
-
-/* Text-level semantics
-   ========================================================================== */
-
-a {
-  @apply .text-blue-600 .bg-transparent;
-}
-
-a:focus,
-a:hover {
-  @apply .no-underline;
-}
-
-a:focus {
-  outline: 5px dashed theme('colors.blue.600');
-  outline-offset: 2px;
-}
-
-header[role="banner"] nav a,
-footer[role="contentinfo"] a {
-  @apply .text-inherit .border-0 .border-b .border-solid .border-gray-500 .no-underline;
-}
-
-header[role="banner"] nav a:focus,
-header[role="banner"] nav a:hover,
-footer[role="contentinfo"] a:focus,
-footer[role="contentinfo"] a:hover {
-  @apply .text-gray-700 .border-transparent;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-
-abbr[title] {
-  border-bottom: none; /* 1 */
-  cursor: help;
-  @apply .underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  @apply .relative .align-baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-mark {
-  @apply .bg-yellow-200;
-}
-
-del {
-  @apply .bg-red-200;
-}
-
-ins {
-  @apply .no-underline .bg-green-200;
-}
-
-/* Embedded content
-   ========================================================================== */
-
-img {
-  @apply .border-none .h-auto .max-w-full;
+body {
+  box-shadow: inset 0 var(--spacing-32) 0 0 var(--color-gray-200);
+  color: var(--color-gray-800);
+  font-family: var(--font-family-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: var(--line-height-normal);
 }
 
 /* Grouped stylings
@@ -194,12 +54,7 @@ h4,
 b,
 strong,
 dt {
-  @apply .font-semibold;
-}
-
-h3,
-h4  {
-  @apply .leading-tight .mb-4;
+  font-weight: var(--font-weight-semibold);
 }
 
 h3,
@@ -211,6 +66,7 @@ cite {
   hyphens: none;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 p,
 ul,
 ol,
@@ -219,52 +75,55 @@ blockquote,
 figure,
 pre,
 hr {
-  @apply .mb-6;
+  margin-bottom: var(--spacing-6);
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 p,
 ul,
 ol,
 dl {
   /**
-     * Read http://clagnut.com/blog/2395/ for more info about the
-     * `hyphenate-*` properties.
-     *
-     * For now these properties are still too new for the tools we are using:
-     *
-     *   - Autoprefixer doesn’t prefix them yet (see https://github.com/postcss/autoprefixer/issues/826)
-     *   - csstree/validator complains, although these are valid CSS properties.
-     *   - On caniuse.com you still can’t see info about these properties
-     *     (although it’s already in discussion, see https://github.com/Fyrd/caniuse/issues/2155)
-     *
-     * The `hyphenate-*` properties are already supported by IE and Edge, and
-     * support for other browsers will grow with time. Perfect example of
-     * progressive enhancement.
-     */
+        * Read http://clagnut.com/blog/2395/ for more info about the
+        * `hyphenate-*` properties.
+        *
+        * For now these properties are still too new for the tools we are using:
+        *
+        *   - Autoprefixer doesn’t prefix them yet (see https://github.com/postcss/autoprefixer/issues/826)
+        *   - csstree/validator complains, although these are valid CSS properties.
+        *   - On caniuse.com you still can’t see info about these properties
+        *     (although it’s already in discussion, see https://github.com/Fyrd/caniuse/issues/2155)
+        *
+        * The `hyphenate-*` properties are already supported by IE and Edge, and
+        * support for other browsers will grow with time. Perfect example of
+        * progressive enhancement.
+        */
 
-    -webkit-hyphenate-limit-after: 3; /* legacy */
-    -webkit-hyphenate-limit-before: 3; /* legacy */
-    -webkit-hyphenate-limit-chars: 6 3 3;
-    -moz-hyphenate-limit-chars: 6 3 3;
-    -ms-hyphenate-limit-chars: 6 3 3;
-    hyphenate-limit-chars: 6 3 3;
-    -webkit-hyphenate-limit-last: always;
-    -moz-hyphenate-limit-last: always;
-    -ms-hyphenate-limit-last: always;
-    hyphenate-limit-last: always;
-    -webkit-hyphenate-limit-lines: 2;
-    -moz-hyphenate-limit-lines: 2;
-    -ms-hyphenate-limit-lines: 2;
-    hyphenate-limit-lines: 2;
-    -webkit-hyphenate-limit-zone: 8%;
-    -moz-hyphenate-limit-zone: 8%;
-    -ms-hyphenate-limit-zone: 8%;
-    hyphenate-limit-zone: 8%;
-
-    hyphens: auto;
+  /* stylelint-disable csstree/validator */
+  -webkit-hyphenate-limit-after: 3; /* legacy */
+  -webkit-hyphenate-limit-before: 3; /* legacy */
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  -moz-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-last: always;
+  hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-lines: 2;
+  hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-zone: 8%;
+  -moz-hyphenate-limit-zone: 8%;
+  -ms-hyphenate-limit-zone: 8%;
+  hyphenate-limit-zone: 8%;
+  /* stylelint-enable csstree/validator */
+  hyphens: auto;
 }
 
-@media screen and (min-width: theme('screens.lg')) {
+@media (--viewport-xl) {
+
   p,
   ul,
   ol,
@@ -277,21 +136,24 @@ pre,
 code,
 mark,
 ins {
-  @apply .text-black;
+  color: var(--color-black);
 }
 
 /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
+    * 1. Correct the inheritance and scaling of font size in all browsers.
+    * 2. Correct the odd `em` font sizing in all browsers.
+    */
 
 pre,
 code {
   background: none;
-  @apply .font-mono .text-left .break-normal .whitespace-pre;
+  font-family: var(--font-family-mono);
   font-size: 1em; /* 2 */
+  overflow-wrap: normal;
   tab-size: 4;
-  text-shadow: 0 1px theme('colors.white');
+  text-align: left;
+  text-shadow: 0 1px var(--color-white);
+  white-space: pre;
   word-break: normal;
   word-spacing: normal;
 }
@@ -300,33 +162,214 @@ pre::selection,
 pre ::selection,
 code::selection,
 code ::selection {
-  background: #b3d4fc;
+  background: var(--color-blue-200);
   text-shadow: none;
 }
 
 pre,
 :not(pre) > code,
 blockquote {
-  @apply .bg-gray-200;
+  background-color: var(--color-gray-200);
 }
 
 pre,
 blockquote {
-  @apply .p-3;
+  padding: var(--spacing-3);
 }
 
 pre {
-  @apply .overflow-auto;
+  overflow: auto;
 }
 
 :not(pre) > code, /* inline code */
 mark,
 del,
 ins {
-  padding: .125rem;
+  padding: var(--spacing-1);
 }
 
 /* inline code */
 :not(pre) > code {
-  @apply .whitespace-normal;
+  white-space: normal;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+main {
+  display: block;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--color-gray-500);
+  box-sizing: content-box; /* 1 */
+  height: 0;
+  overflow: visible; /* 1 */
+  text-align: left;
+  width: 33.33333%;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+figcaption {
+  color: var(--color-gray-600);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-tight);
+  margin-top: var(--spacing-3);
+}
+
+figcaption a {
+  color: inherit;
+}
+
+/* Headings
+   ========================================================================== */
+
+h1,
+h2 {
+  font-weight: var(--font-weight-semibold);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-2);
+}
+
+@media (--viewport-xl) {
+
+  h2 {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+h3,
+h4 {
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-4);
+
+  /* Little optical adjustment to counter-balance tighter line height. */
+  padding-top: var(--spacing-1);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+}
+
+h4,
+h5 {
+  font-size: var(--font-size-base);
+}
+
+h5 {
+  font-weight: var(--font-weight-normal);
+}
+
+/* Lists
+   ========================================================================== */
+
+ul,
+ol {
+  list-style-position: outside;
+  margin-left: var(--spacing-6);
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+dd {
+  margin-left: var(--spacing-3);
+}
+
+dd + dt {
+  margin-top: var(--spacing-3);
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/* stylelint-disable-next-line no-descending-specificity */
+a {
+  color: var(--color-blue-600);
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 5px dashed var(--color-blue-600);
+  outline-offset: 2px;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  cursor: help;
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: var(--line-height-zero);
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+mark {
+  background-color: var(--color-yellow-200);
+}
+
+del {
+  background-color: var(--color-red-200);
+}
+
+ins {
+  background-color: var(--color-green-200);
+  text-decoration: none;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+img {
+  border: 0;
+  display: block;
+  height: auto;
+  max-width: 100%;
 }

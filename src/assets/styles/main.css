@@ -1,9 +1,27 @@
 @charset "UTF-8";
-/* purgecss start ignore */
-@import "_fonts.css";
-@import "_reset.css";
-/* purgecss end ignore */
-@import "_tailwind.css";
-/* purgecss start ignore */
-@import "_lib.css";
-/* purgecss end ignore */
+
+/* setup */
+
+@import './_custom-media.css';
+@import './_custom-properties.css';
+@import './_mixins.css';
+@import './_fonts.css';
+@import './_reset.css';
+
+/* components */
+
+@import './_clearfix.css';
+@import './_content-wrapper.css';
+@import './_cta-header.css';
+@import './_heading-space.css';
+@import './_main-footer.css';
+@import './_main-header.css';
+@import './_permalink-anchor.css';
+@import './_post.css';
+@import './_posts.css';
+@import './_visually-hidden.css';
+
+/* libs */
+
+@import './_lazyload.css';
+@import './_prismjs.css';

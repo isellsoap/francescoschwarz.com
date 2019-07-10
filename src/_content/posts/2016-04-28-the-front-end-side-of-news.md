@@ -6,6 +6,9 @@ tags:
   - data
   - performance
   - websites
+image:
+  url: /images/main/2016/04/frontend-side-of-news.jpg
+  alt: A cool dude with glasses carefully reading a newspaper.
 twitterTimeline: '1063059280822185984'
 ---
 I created a [GitHub repository](https://github.com/isellsoap/front-end-side-of-news/) featuring front-end metrics from big news sites around the world. For the start I gathered data of around 40 news sites from Germany and the USA, ranging from [abc.com](http://abc.com) to [zeit.de](https://www.zeit.de/). The plan is to add a lot of other sites from other countries step by step, like UK, France and Italy.
