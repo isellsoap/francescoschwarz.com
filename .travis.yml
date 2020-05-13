@@ -1,6 +1,8 @@
 os: osx
 
 language: node_js
+node_js:
+  - 10.20.1
 
 addons:
   ssh_known_hosts:
